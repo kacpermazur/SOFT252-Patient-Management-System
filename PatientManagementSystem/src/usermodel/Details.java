@@ -13,30 +13,46 @@ public class Details {
     
     private String name;
     private String surname;
-    private Address address;
-    private String unquieID;
+    private String unqiueID;
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public Details(String name, String surname, String unqiueID) {
+        this.name = name;
+        this.surname = surname;
+        this.unqiueID = unqiueID;
+    }
 
-    public String getSurname() { return surname; }
-    public void setSurname(String surname) { this.surname = surname; }
+    public String getName() {
+        return name;
+    }
 
-    public Address getAddress() { return address; }
-    public void setAddress(Address address) { this.address = address; }
-    
-    public String getUnquieID() { return unquieID; }
-    public void setUnquieID(String unquieID) { this.unquieID = unquieID; }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getUnqiueID() {
+        return unqiueID;
+    }
+
+    public void setUnqiueID(String unqiueID) {
+        this.unqiueID = unqiueID;
+    }
     
     public String toString()
     {
-        String holder = "";
+        String hold = "";
         
-        holder = "Name: " + this.getName() + "/n"
-                + "Surname: " + this.getSurname() + "/n"
-                + "Address: " + this.address.toString() + "/n"
-                + "UnquieID: " + this.getUnquieID();
+        hold = "Name: " + this.name + "\n"
+                + "Surname: " + this.surname + "\n"
+                + "unqiueID: " + this.unqiueID + "\n" ;
         
-        return holder;
+        return hold;
     }
 }

@@ -13,27 +13,53 @@ public class Address {
     private String building;
     private String road;
     private String city;
-    private String postcode;
+    private String postCode;
 
-    public String getBuilding() { return building; }
-    public void setBuilding(String building) { this.building = building; }
+    public Address(String building, String road, String city, String postCode) {
+        this.building = building;
+        this.road = road;
+        this.city = city;
+        this.postCode = postCode;
+    }
 
-    public String getRoad() {return road; }
-    public void setRoad(String road) { this.road = road; }
+    public String getBuilding() {
+        return building;
+    }
 
-    public String getCity() { return city; }
-    public void setCity(String city) { this.city = city; }
+    public void setBuilding(String building) {
+        this.building = building;
+    }
 
-    public String getPostcode() { return postcode; }
-    public void setPostcode(String postcode) { this.postcode = postcode; }
+    public String getRoad() {
+        return road;
+    }
+
+    public void setRoad(String road) {
+        this.road = road;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getPostCode() {
+        return postCode;
+    }
+
+    public void setPostCode(String postCode) {
+        this.postCode = postCode;
+    }
     
     public String toString()
     {
-        String holder = "";
+        String hold = "";
         
-        holder = this.getBuilding() + "," + this.getRoad() + ","
-                + this.getCity() + ", " + this.getPostcode();
+        hold = this.building + ", " + this.road + ", " + this.city + ", " + this.postCode;
         
-        return holder;
+        return hold;
     }
 }

@@ -5,6 +5,10 @@
  */
 package patientmanagementsystem;
 
+import usermodel.Address;
+import usermodel.Details;
+import usermodel.User;
+
 /**
  *
  * @author kacper
@@ -16,6 +20,19 @@ public class main {
      */
     public static void main(String[] args) {
         
+        //Test: GUI Input sim
+        Address inputAdd = new Address("building1", "road1", "city1", "postcode1");
+        Details inputDet = new Details("Bob" , "Smith", "0001t");
+        
+        System.out.println(inputAdd.toString());
+        System.out.println();
+        System.out.println(inputDet.toString());
+        System.out.println();
+        
+        
+        //testUser.toString();
+        User test = new User(inputDet,inputAdd);
+        System.out.println(test.toString());
     }
     
 }

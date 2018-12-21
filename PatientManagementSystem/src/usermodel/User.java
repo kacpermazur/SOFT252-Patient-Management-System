@@ -11,19 +11,21 @@ package usermodel;
  */
 public class User {
     
-    private Details userDetails;
-    
-    public User(String currName, String currSurname, Address currAddress, 
-            String currUnqiueID)
-    {
-        this.userDetails.setName(currName);
-        this.userDetails.setSurname(currSurname);
-        this.userDetails.setAddress(currAddress);
-        this.userDetails.setUnquieID(GenerateUnqiueID());
+    Details userInfo;
+    Address userAddress;
+
+    public User(Details userInfo, Address userAddress) {
+        this.userInfo = userInfo;
+        this.userAddress = userAddress;
     }
     
-    private String GenerateUnqiueID()
+    public String toString()
     {
-        return "Test001";
+        String hold = "";
+        
+        hold = this.userInfo.toString()
+             + this.userAddress.toString();
+        
+        return hold;
     }
 }
