@@ -1,2 +1,4 @@
 # SOFT252-Patient-Management-System
-a
+Name: Kacper Mazur
+
+Student ID: 10584682
