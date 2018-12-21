@@ -9,12 +9,21 @@ package usermodel;
  *
  * @author kacper
  */
-public abstract class User {
+public class User {
     
     private Details userDetails;
     
-    public User()
+    public User(String currName, String currSurname, Address currAddress, 
+            String currUnqiueID)
     {
-        this.userDetails =  new userDetails();
+        this.userDetails.setName(currName);
+        this.userDetails.setSurname(currSurname);
+        this.userDetails.setAddress(currAddress);
+        this.userDetails.setUnquieID(GenerateUnqiueID());
+    }
+    
+    private String GenerateUnqiueID()
+    {
+        return "Test001";
     }
 }
