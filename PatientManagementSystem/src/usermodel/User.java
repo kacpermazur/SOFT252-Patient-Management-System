@@ -12,4 +12,9 @@ package usermodel;
 public abstract class User {
     
     private Details userDetails;
+    
+    public User()
+    {
+        this.userDetails =  new userDetails();
+    }
 }
