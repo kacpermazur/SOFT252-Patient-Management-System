@@ -22,16 +22,16 @@ public class main {
         
         //Test: GUI Input sim
         Address inputAdd = new Address("building1", "road1", "city1", "postcode1");
-        Details inputDet = new Details("Bob" , "Smith", "0001t");
+        Details inputDet = new Details("Bob" , "Smith", "0001t", inputAdd);
         
         System.out.println(inputAdd.toString());
         System.out.println();
         System.out.println(inputDet.toString());
-        System.out.println();
+        System.out.println("______________________");
         
         
         //testUser.toString();
-        User test = new User(inputDet,inputAdd);
+        User test = new User(inputDet);
         System.out.println(test.toString());
     }
     

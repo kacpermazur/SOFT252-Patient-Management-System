@@ -13,13 +13,17 @@ public class Details {
     
     private String name;
     private String surname;
+    private Address userAddress;
     private String unqiueID;
+    
 
-    public Details(String name, String surname, String unqiueID) {
+    public Details(String name, String surname, String unqiueID, Address address) {
         this.name = name;
         this.surname = surname;
         this.unqiueID = unqiueID;
+        this.userAddress = address;
     }
+    
 
     public String getName() {
         return name;
@@ -51,7 +55,8 @@ public class Details {
         
         hold = "Name: " + this.name + "\n"
                 + "Surname: " + this.surname + "\n"
-                + "unqiueID: " + this.unqiueID + "\n" ;
+                + "Address: " + this.userAddress+ "\n"
+                + "unqiueID: " + this.unqiueID + "\n";
         
         return hold;
     }

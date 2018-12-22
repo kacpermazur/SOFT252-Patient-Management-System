@@ -11,20 +11,17 @@ package usermodel;
  */
 public class User {
     
-    Details userInfo;
-    Address userAddress;
+    Details userInfo;;
 
-    public User(Details userInfo, Address userAddress) {
+    public User(Details userInfo) {
         this.userInfo = userInfo;
-        this.userAddress = userAddress;
     }
     
     public String toString()
     {
         String hold = "";
         
-        hold = this.userInfo.toString()
-             + this.userAddress.toString();
+        hold = this.userInfo.toString();
         
         return hold;
     }
