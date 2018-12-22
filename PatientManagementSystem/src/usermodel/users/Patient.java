@@ -13,10 +13,10 @@ import usermodel.*;
  */
 public class Patient extends User {
 
-    public Patient(Details userInfo) {
-        super(userInfo);
+    public Patient(Details userInfo, String userPassword) {
+        super(userInfo, userPassword);
     }
-    
+        
     @Override
     protected String generateID()
     {

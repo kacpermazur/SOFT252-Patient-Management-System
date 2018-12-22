@@ -12,13 +12,16 @@ package usermodel;
 public abstract class User {
     
     protected Details userInfo;
+    
     protected String unqiueID;
+    protected String password;
     
     private static int unqiueUserCount = 0;
 
-    public User(Details userInfo) {
+    public User(Details userInfo, String userPassword) {
         this.userInfo = userInfo;
         this.unqiueID = generateID();
+        this.password = userPassword;
         
         unqiueUserCount = unqiueUserCount + 1;
     }
@@ -26,11 +29,17 @@ public abstract class User {
     public static void setUnqiueUserCount(int unqiueUserCount) {
         User.unqiueUserCount = unqiueUserCount;
     }
-      
+
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    } 
+    
     public String getUnqiueID() {
         return unqiueID;
     }
-
     public static int getUnqiueUserCount() {
         return unqiueUserCount;
     }
@@ -48,7 +57,7 @@ public abstract class User {
     
     public String toString()
     {
-        String hold = "";
+        String hold = "n/a";
         
         hold = this.userInfo.toString();
         

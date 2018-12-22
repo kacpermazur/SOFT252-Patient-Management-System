@@ -27,14 +27,14 @@ public class main {
         
         inputDet.setUserAddress(inputAdd);
         
-        User test = new Patient(inputDet);
+        User test = new Patient(inputDet, "pass123");
         
         System.out.println(test.toString());
         System.out.println(test.getUnqiueID());
         System.out.println(test.getUserType());
         System.out.println("Current User Count: " + User.getUnqiueUserCount());
         
-        User test2 = new Patient(inputDet);
+        User test2 = new Patient(inputDet, "pass123");
         System.out.println("Current User Count: " + User.getUnqiueUserCount());
         System.out.println("Current User Count: " + User.getUnqiueUserCount());
         

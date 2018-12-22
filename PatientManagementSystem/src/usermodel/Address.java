@@ -23,31 +23,36 @@ public class Address {
     }
 
     public String getBuilding() {
+        
         return building;
     }
     public void setBuilding(String building) {
-        this.building = building;
+        if (building != null && !building.isEmpty())
+            this.building = building;
     }
 
     public String getRoad() {
         return road;
     }
     public void setRoad(String road) {
-        this.road = road;
+        if (road != null && !road.isEmpty())
+            this.road = road;
     }
 
     public String getCity() {
         return city;
     }
     public void setCity(String city) {
-        this.city = city;
+        if (city != null && !city.isEmpty())
+            this.city = city;
     }
 
     public String getPostCode() {
         return postCode;
     }
     public void setPostCode(String postCode) {
-        this.postCode = postCode;
+        if (postCode != null && !postCode.isEmpty())
+            this.postCode = postCode;
     }
     
     public String toString()

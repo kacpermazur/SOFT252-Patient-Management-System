@@ -27,24 +27,33 @@ public class Details {
     }
 
     public Address getUserAddress() {
-        return userAddress;
+        
+        if(this.userAddress != null)
+        {
+            return userAddress;
+        }
+        
+        return new Address("none set","none set","none set","none set");
     }
     public void setUserAddress(Address userAddress) {
-        this.userAddress = userAddress;
+        if (userAddress != null)
+            this.userAddress = userAddress;
     }
     
     public String getName() {
         return name;
     }
     public void setName(String name) {
-        this.name = name;
+        if (name != null && !name.isEmpty())
+            this.name = name;
     }
 
     public String getSurname() {
         return surname;
     }
     public void setSurname(String surname) {
-        this.surname = surname;
+        if (surname != null && !surname.isEmpty())
+            this.surname = surname;
     }
         
     public String toString()
