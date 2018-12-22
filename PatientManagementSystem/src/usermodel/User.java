@@ -5,6 +5,8 @@
  */
 package usermodel;
 
+import java.util.List;
+
 /**
  *
  * @author kacper
