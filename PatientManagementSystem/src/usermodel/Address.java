@@ -25,7 +25,6 @@ public class Address {
     public String getBuilding() {
         return building;
     }
-
     public void setBuilding(String building) {
         this.building = building;
     }
@@ -33,7 +32,6 @@ public class Address {
     public String getRoad() {
         return road;
     }
-
     public void setRoad(String road) {
         this.road = road;
     }
@@ -41,7 +39,6 @@ public class Address {
     public String getCity() {
         return city;
     }
-
     public void setCity(String city) {
         this.city = city;
     }
@@ -49,14 +46,13 @@ public class Address {
     public String getPostCode() {
         return postCode;
     }
-
     public void setPostCode(String postCode) {
         this.postCode = postCode;
     }
     
     public String toString()
     {
-        String hold = "";
+        String hold = "n/a";
         
         hold = this.building + ", " + this.road + ", " + this.city + ", " + this.postCode;
         

@@ -8,6 +8,7 @@ package patientmanagementsystem;
 import usermodel.Address;
 import usermodel.Details;
 import usermodel.User;
+import usermodel.users.Patient;
 
 /**
  *
@@ -20,19 +21,23 @@ public class main {
      */
     public static void main(String[] args) {
         
-        //Test: GUI Input sim
-        Address inputAdd = new Address("building1", "road1", "city1", "postcode1");
-        Details inputDet = new Details("Bob" , "Smith", "0001t", inputAdd);
+        // GUI Stored Input:
+        Details inputDet = new Details("Joe", "Smith");
+        Address inputAdd = new Address("Build Name", "Street Name", "Plymouth", "PL1 1AA");
         
-        System.out.println(inputAdd.toString());
-        System.out.println();
-        System.out.println(inputDet.toString());
-        System.out.println("______________________");
+        inputDet.setUserAddress(inputAdd);
         
+        User test = new Patient(inputDet);
         
-        //testUser.toString();
-        User test = new User(inputDet);
         System.out.println(test.toString());
+        System.out.println(test.getUnqiueID());
+        System.out.println(test.getUserType());
+        System.out.println("Current User Count: " + User.getUnqiueUserCount());
+        
+        User test2 = new Patient(inputDet);
+        System.out.println("Current User Count: " + User.getUnqiueUserCount());
+        System.out.println("Current User Count: " + User.getUnqiueUserCount());
+        
     }
     
 }

@@ -14,21 +14,28 @@ public class Details {
     private String name;
     private String surname;
     private Address userAddress;
-    private String unqiueID;
-    
 
-    public Details(String name, String surname, String unqiueID, Address address) {
+    public Details(String name, String surname) {
         this.name = name;
         this.surname = surname;
-        this.unqiueID = unqiueID;
+    }
+
+    public Details(String name, String surname, Address address) {
+        this.name = name;
+        this.surname = surname;
         this.userAddress = address;
     }
-    
 
+    public Address getUserAddress() {
+        return userAddress;
+    }
+    public void setUserAddress(Address userAddress) {
+        this.userAddress = userAddress;
+    }
+    
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -36,27 +43,17 @@ public class Details {
     public String getSurname() {
         return surname;
     }
-
     public void setSurname(String surname) {
         this.surname = surname;
     }
-
-    public String getUnqiueID() {
-        return unqiueID;
-    }
-
-    public void setUnqiueID(String unqiueID) {
-        this.unqiueID = unqiueID;
-    }
-    
+        
     public String toString()
     {
-        String hold = "";
+        String hold = "n/a";
         
         hold = "Name: " + this.name + "\n"
                 + "Surname: " + this.surname + "\n"
-                + "Address: " + this.userAddress+ "\n"
-                + "unqiueID: " + this.unqiueID + "\n";
+                + "Address: " + this.userAddress+ "\n";
         
         return hold;
     }
