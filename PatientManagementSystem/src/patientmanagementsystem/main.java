@@ -5,9 +5,8 @@
  */
 package patientmanagementsystem;
 
-import usermodel.Address;
-import usermodel.Details;
-import usermodel.User;
+import java.time.LocalDateTime;
+import usermodel.*;
 import usermodel.users.Patient;
 
 /**
@@ -38,6 +37,20 @@ public class main {
         System.out.println("Current User Count: " + User.getUnqiueUserCount());
         System.out.println("Current User Count: " + User.getUnqiueUserCount());
         
+        LocalDateTime date = LocalDateTime.now();
+        
+        Notification abc = new Notification(date, "Spagget", "Somebody touch ma spagget");
+        Notification abcd = new Notification(date, "dab", "dab on it");
+        Notification abcde = new Notification(date, "frog", "check frogs");
+        
+        test.getUserNotfications().addNotification(abc);
+        test.getUserNotfications().addNotification(abcd);
+        test.getUserNotfications().addNotification(abcde);
+        
+        System.out.println(abc.toString());
+        
+        System.out.println(test.getUserNotfications().getNotificationByTitle("dab").toString());
+        //System.out.println(test2.getUserNotfications().getNotificationByTitle("dab").toString());
     }
     
 }

@@ -13,12 +13,13 @@ import java.util.List;
  */
 public abstract class User {
     
-    protected Details userInfo;
+    private static int unqiueUserCount = 0;
     
+    protected Details userInfo;
     protected String unqiueID;
     protected String password;
     
-    private static int unqiueUserCount = 0;
+    protected NotificationList userNotfications;
 
     public User(Details userInfo, String userPassword) {
         this.userInfo = userInfo;
@@ -26,6 +27,7 @@ public abstract class User {
         this.password = userPassword;
         
         unqiueUserCount = unqiueUserCount + 1;
+        userNotfications = new NotificationList();
     }
 
     public static void setUnqiueUserCount(int unqiueUserCount) {
@@ -52,6 +54,15 @@ public abstract class User {
     public void setUserInfo(Details userInfo) {
         this.userInfo = userInfo;
     }
+
+    public NotificationList getUserNotfications() {
+        return userNotfications;
+    }
+    public void setUserNotfications(NotificationList userNotfications) {
+        this.userNotfications = userNotfications;
+    }
+    
+    
            
     protected abstract String generateID();
     
