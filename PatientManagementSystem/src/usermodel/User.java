@@ -70,10 +70,10 @@ public abstract class User {
     
     public String toString()
     {
-        String hold = "n/a";
+        StringBuilder hold = new StringBuilder();
         
-        hold = this.userInfo.toString();
+        hold.append(this.userInfo.toString());
         
-        return hold;
+        return hold.toString();
     }
 }

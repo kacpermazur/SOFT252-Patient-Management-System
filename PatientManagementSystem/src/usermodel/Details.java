@@ -58,12 +58,16 @@ public class Details {
         
     public String toString()
     {
-        String hold = "n/a";
         
-        hold = "Name: " + this.name + "\n"
-                + "Surname: " + this.surname + "\n"
-                + "Address: " + this.userAddress+ "\n";
+        StringBuilder hold = new StringBuilder();
         
-        return hold;
+        hold.append("\n");
+        hold.append("Name: " + this.name);
+        hold.append("\n");
+        hold.append("Surname: " + this.surname);
+        hold.append("\n");
+        hold.append("Address: " + this.userAddress);
+
+        return hold.toString();
     }
 }

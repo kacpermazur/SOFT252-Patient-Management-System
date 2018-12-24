@@ -57,10 +57,16 @@ public class Address {
     
     public String toString()
     {
-        String hold = "n/a";
+        StringBuilder hold = new StringBuilder();
         
-        hold = this.building + ", " + this.road + ", " + this.city + ", " + this.postCode;
+        hold.append(this.building);
+        hold.append(", ");
+        hold.append(this.road);
+        hold.append(", ");
+        hold.append(this.city);
+        hold.append(", ");
+        hold.append(this.postCode);
         
-        return hold;
+        return hold.toString();
     }
 }
