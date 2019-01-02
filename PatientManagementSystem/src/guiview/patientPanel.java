@@ -27,13 +27,183 @@ public class patientPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        lblUsertTitle = new javax.swing.JLabel();
+        tplUserOptions = new javax.swing.JTabbedPane();
+        pnlAppointment = new javax.swing.JPanel();
+        lblDoctorList = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtaDoctorList = new javax.swing.JTextArea();
+        btnSend = new javax.swing.JButton();
+        lblReviewDoctor = new javax.swing.JLabel();
+        lblRating = new javax.swing.JLabel();
+        btnRequestAppointment = new javax.swing.JButton();
+        cboRating = new javax.swing.JComboBox<>();
+        lblComment = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtaComment = new javax.swing.JTextArea();
+        pnlPastCurAppointments = new javax.swing.JPanel();
+        lblAppointmentList = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        txtaAppointmentList = new javax.swing.JTextArea();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 96, 15));
 
-        jTabbedPane1.setBackground(new java.awt.Color(56, 142, 60));
+        lblUsertTitle.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        lblUsertTitle.setForeground(new java.awt.Color(0, 0, 0));
+        lblUsertTitle.setText("Patient ");
+
+        tplUserOptions.setBackground(new java.awt.Color(56, 142, 60));
+        tplUserOptions.setForeground(new java.awt.Color(0, 0, 0));
+
+        pnlAppointment.setBackground(new java.awt.Color(106, 191, 105));
+        pnlAppointment.setForeground(new java.awt.Color(0, 0, 0));
+
+        lblDoctorList.setBackground(new java.awt.Color(0, 0, 0));
+        lblDoctorList.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblDoctorList.setForeground(new java.awt.Color(0, 0, 0));
+        lblDoctorList.setText("DoctorList:");
+
+        txtaDoctorList.setEditable(false);
+        txtaDoctorList.setBackground(new java.awt.Color(255, 255, 255));
+        txtaDoctorList.setColumns(20);
+        txtaDoctorList.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtaDoctorList.setForeground(new java.awt.Color(0, 0, 0));
+        txtaDoctorList.setRows(5);
+        jScrollPane1.setViewportView(txtaDoctorList);
+
+        btnSend.setBackground(new java.awt.Color(56, 142, 60));
+        btnSend.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        btnSend.setForeground(new java.awt.Color(0, 0, 0));
+        btnSend.setText("Send");
+        btnSend.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        btnSend.setBorderPainted(false);
+
+        lblReviewDoctor.setBackground(new java.awt.Color(0, 0, 0));
+        lblReviewDoctor.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblReviewDoctor.setForeground(new java.awt.Color(0, 0, 0));
+        lblReviewDoctor.setText("Review Doctor:");
+
+        lblRating.setBackground(new java.awt.Color(0, 0, 0));
+        lblRating.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lblRating.setForeground(new java.awt.Color(0, 0, 0));
+        lblRating.setText("Rating: ");
+
+        btnRequestAppointment.setBackground(new java.awt.Color(56, 142, 60));
+        btnRequestAppointment.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        btnRequestAppointment.setForeground(new java.awt.Color(0, 0, 0));
+        btnRequestAppointment.setText("Request Appointment");
+        btnRequestAppointment.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        btnRequestAppointment.setBorderPainted(false);
+
+        cboRating.setBackground(new java.awt.Color(255, 255, 255));
+        cboRating.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        cboRating.setForeground(new java.awt.Color(0, 0, 0));
+        cboRating.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5 Stars", "4 Stars", "3 Stars", "2 Stars", "1 Stars" }));
+
+        lblComment.setBackground(new java.awt.Color(0, 0, 0));
+        lblComment.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lblComment.setForeground(new java.awt.Color(0, 0, 0));
+        lblComment.setText("Comment:");
+
+        txtaComment.setBackground(new java.awt.Color(255, 255, 255));
+        txtaComment.setColumns(20);
+        txtaComment.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtaComment.setForeground(new java.awt.Color(0, 0, 0));
+        txtaComment.setRows(5);
+        txtaComment.setFocusable(false);
+        jScrollPane2.setViewportView(txtaComment);
+
+        javax.swing.GroupLayout pnlAppointmentLayout = new javax.swing.GroupLayout(pnlAppointment);
+        pnlAppointment.setLayout(pnlAppointmentLayout);
+        pnlAppointmentLayout.setHorizontalGroup(
+            pnlAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlAppointmentLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(pnlAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnRequestAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblReviewDoctor)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblDoctorList)
+                        .addGroup(pnlAppointmentLayout.createSequentialGroup()
+                            .addGap(12, 12, 12)
+                            .addGroup(pnlAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblComment)
+                                .addComponent(lblRating))
+                            .addGap(18, 18, 18)
+                            .addGroup(pnlAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+                                .addComponent(cboRating, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnSend, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+        pnlAppointmentLayout.setVerticalGroup(
+            pnlAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlAppointmentLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblDoctorList)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRequestAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(lblReviewDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(pnlAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAppointmentLayout.createSequentialGroup()
+                        .addGroup(pnlAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblRating)
+                            .addComponent(cboRating, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblComment)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnSend, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+
+        tplUserOptions.addTab("Appointment/Review", pnlAppointment);
+
+        pnlPastCurAppointments.setBackground(new java.awt.Color(106, 191, 105));
+        pnlPastCurAppointments.setForeground(new java.awt.Color(0, 0, 0));
+
+        lblAppointmentList.setBackground(new java.awt.Color(0, 0, 0));
+        lblAppointmentList.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblAppointmentList.setForeground(new java.awt.Color(0, 0, 0));
+        lblAppointmentList.setText("Appointment List:");
+
+        txtaAppointmentList.setEditable(false);
+        txtaAppointmentList.setBackground(new java.awt.Color(255, 255, 255));
+        txtaAppointmentList.setColumns(20);
+        txtaAppointmentList.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtaAppointmentList.setForeground(new java.awt.Color(0, 0, 0));
+        txtaAppointmentList.setRows(5);
+        jScrollPane3.setViewportView(txtaAppointmentList);
+
+        javax.swing.GroupLayout pnlPastCurAppointmentsLayout = new javax.swing.GroupLayout(pnlPastCurAppointments);
+        pnlPastCurAppointments.setLayout(pnlPastCurAppointmentsLayout);
+        pnlPastCurAppointmentsLayout.setHorizontalGroup(
+            pnlPastCurAppointmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPastCurAppointmentsLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(pnlPastCurAppointmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblAppointmentList)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 634, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+        pnlPastCurAppointmentsLayout.setVerticalGroup(
+            pnlPastCurAppointmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPastCurAppointmentsLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(lblAppointmentList)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        tplUserOptions.addTab("Past/Current Appointments", pnlPastCurAppointments);
 
         jPanel1.setBackground(new java.awt.Color(106, 191, 105));
 
@@ -48,11 +218,7 @@ public class patientPanel extends javax.swing.JPanel {
             .addGap(0, 497, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("tab1", jPanel1);
-
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Patient ");
+        tplUserOptions.addTab("tab3", jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -61,27 +227,44 @@ public class patientPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane1)
+                    .addComponent(tplUserOptions)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addGap(25, 25, 25)
+                        .addComponent(lblUsertTitle)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1)
+                .addGap(15, 15, 15)
+                .addComponent(lblUsertTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tplUserOptions)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnRequestAppointment;
+    private javax.swing.JButton btnSend;
+    private javax.swing.JComboBox<String> cboRating;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JLabel lblAppointmentList;
+    private javax.swing.JLabel lblComment;
+    private javax.swing.JLabel lblDoctorList;
+    private javax.swing.JLabel lblRating;
+    private javax.swing.JLabel lblReviewDoctor;
+    private javax.swing.JLabel lblUsertTitle;
+    private javax.swing.JPanel pnlAppointment;
+    private javax.swing.JPanel pnlPastCurAppointments;
+    private javax.swing.JTabbedPane tplUserOptions;
+    private javax.swing.JTextArea txtaAppointmentList;
+    private javax.swing.JTextArea txtaComment;
+    private javax.swing.JTextArea txtaDoctorList;
     // End of variables declaration//GEN-END:variables
 }
