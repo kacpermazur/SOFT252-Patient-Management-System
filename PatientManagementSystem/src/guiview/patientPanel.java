@@ -45,7 +45,11 @@ public class patientPanel extends javax.swing.JPanel {
         lblAppointmentList = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         txtaAppointmentList = new javax.swing.JTextArea();
-        jPanel1 = new javax.swing.JPanel();
+        plnPastCurrPerscriptions = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        txtaPerscriptionList = new javax.swing.JTextArea();
+        lblPerscriptionList = new javax.swing.JLabel();
+        btnSend1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 96, 15));
 
@@ -111,7 +115,6 @@ public class patientPanel extends javax.swing.JPanel {
         txtaComment.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         txtaComment.setForeground(new java.awt.Color(0, 0, 0));
         txtaComment.setRows(5);
-        txtaComment.setFocusable(false);
         jScrollPane2.setViewportView(txtaComment);
 
         javax.swing.GroupLayout pnlAppointmentLayout = new javax.swing.GroupLayout(pnlAppointment);
@@ -137,7 +140,7 @@ public class patientPanel extends javax.swing.JPanel {
                                 .addComponent(cboRating, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnSend, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         pnlAppointmentLayout.setVerticalGroup(
             pnlAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,9 +149,9 @@ public class patientPanel extends javax.swing.JPanel {
                 .addComponent(lblDoctorList)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(21, 21, 21)
                 .addComponent(btnRequestAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblReviewDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(pnlAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,7 +164,7 @@ public class patientPanel extends javax.swing.JPanel {
                             .addComponent(lblComment)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(btnSend, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         tplUserOptions.addTab("Appointment/Review", pnlAppointment);
@@ -191,7 +194,7 @@ public class patientPanel extends javax.swing.JPanel {
                 .addGroup(pnlPastCurAppointmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblAppointmentList)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 634, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         pnlPastCurAppointmentsLayout.setVerticalGroup(
             pnlPastCurAppointmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,20 +208,56 @@ public class patientPanel extends javax.swing.JPanel {
 
         tplUserOptions.addTab("Past/Current Appointments", pnlPastCurAppointments);
 
-        jPanel1.setBackground(new java.awt.Color(106, 191, 105));
+        plnPastCurrPerscriptions.setBackground(new java.awt.Color(106, 191, 105));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 686, Short.MAX_VALUE)
+        txtaPerscriptionList.setEditable(false);
+        txtaPerscriptionList.setBackground(new java.awt.Color(255, 255, 255));
+        txtaPerscriptionList.setColumns(20);
+        txtaPerscriptionList.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtaPerscriptionList.setForeground(new java.awt.Color(0, 0, 0));
+        txtaPerscriptionList.setRows(5);
+        jScrollPane4.setViewportView(txtaPerscriptionList);
+
+        lblPerscriptionList.setBackground(new java.awt.Color(0, 0, 0));
+        lblPerscriptionList.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblPerscriptionList.setForeground(new java.awt.Color(0, 0, 0));
+        lblPerscriptionList.setText("Perscription List:");
+
+        btnSend1.setBackground(new java.awt.Color(56, 142, 60));
+        btnSend1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        btnSend1.setForeground(new java.awt.Color(0, 0, 0));
+        btnSend1.setText("View Perscription");
+        btnSend1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        btnSend1.setBorderPainted(false);
+
+        javax.swing.GroupLayout plnPastCurrPerscriptionsLayout = new javax.swing.GroupLayout(plnPastCurrPerscriptions);
+        plnPastCurrPerscriptions.setLayout(plnPastCurrPerscriptionsLayout);
+        plnPastCurrPerscriptionsLayout.setHorizontalGroup(
+            plnPastCurrPerscriptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(plnPastCurrPerscriptionsLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(plnPastCurrPerscriptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblPerscriptionList)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 634, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(31, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, plnPastCurrPerscriptionsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSend1, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(172, 172, 172))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 497, Short.MAX_VALUE)
+        plnPastCurrPerscriptionsLayout.setVerticalGroup(
+            plnPastCurrPerscriptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(plnPastCurrPerscriptionsLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(lblPerscriptionList)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnSend1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        tplUserOptions.addTab("tab3", jPanel1);
+        tplUserOptions.addTab("Past/Current Perscriptions", plnPastCurrPerscriptions);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -249,22 +288,26 @@ public class patientPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRequestAppointment;
     private javax.swing.JButton btnSend;
+    private javax.swing.JButton btnSend1;
     private javax.swing.JComboBox<String> cboRating;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel lblAppointmentList;
     private javax.swing.JLabel lblComment;
     private javax.swing.JLabel lblDoctorList;
+    private javax.swing.JLabel lblPerscriptionList;
     private javax.swing.JLabel lblRating;
     private javax.swing.JLabel lblReviewDoctor;
     private javax.swing.JLabel lblUsertTitle;
+    private javax.swing.JPanel plnPastCurrPerscriptions;
     private javax.swing.JPanel pnlAppointment;
     private javax.swing.JPanel pnlPastCurAppointments;
     private javax.swing.JTabbedPane tplUserOptions;
     private javax.swing.JTextArea txtaAppointmentList;
     private javax.swing.JTextArea txtaComment;
     private javax.swing.JTextArea txtaDoctorList;
+    private javax.swing.JTextArea txtaPerscriptionList;
     // End of variables declaration//GEN-END:variables
 }

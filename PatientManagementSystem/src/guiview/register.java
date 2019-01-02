@@ -85,7 +85,7 @@ public class register extends javax.swing.JFrame {
             .addGroup(pnlTitleHeaderLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(lblTitle)
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
         pnlTitleHeaderLayout.setVerticalGroup(
             pnlTitleHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -282,7 +282,7 @@ public class register extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addComponent(lblUserType)
                 .addGap(18, 18, 18)
-                .addComponent(cboUserType, 0, 292, Short.MAX_VALUE)
+                .addComponent(cboUserType, 0, 294, Short.MAX_VALUE)
                 .addGap(59, 59, 59))
         );
         pnlUserTypesLayout.setVerticalGroup(
@@ -343,7 +343,7 @@ public class register extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
