@@ -26,7 +26,7 @@ public class Details {
         this.userAddress = address;
     }
 
-    public Address getUserAddress() {
+    public Address getAddress() {
         
         if(this.userAddress != null)
         {
@@ -35,7 +35,7 @@ public class Details {
         
         return new Address("none set","none set","none set","none set");
     }
-    public void setUserAddress(Address userAddress) {
+    public void setAddress(Address userAddress) {
         if (userAddress != null)
             this.userAddress = userAddress;
     }

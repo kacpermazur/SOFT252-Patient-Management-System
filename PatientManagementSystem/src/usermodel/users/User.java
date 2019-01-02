@@ -3,9 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package usermodel;
+package usermodel.users;
 
 import java.util.List;
+import usermodel.Details;
+import usermodel.NotificationList;
+import usermodel.UserType;
 
 /**
  *
@@ -15,6 +18,7 @@ public abstract class User {
     
     private static int unqiueUserCount = 0;
     
+    protected UserType userType = null;
     protected Details userInfo;
     protected String unqiueID;
     protected String password;
@@ -33,7 +37,11 @@ public abstract class User {
     public static void setUnqiueUserCount(int unqiueUserCount) {
         User.unqiueUserCount = unqiueUserCount;
     }
-
+              
+    protected abstract String generateID();
+    
+    protected abstract UserType getUserType();
+    
     public String getPassword() {
         return password;
     }
@@ -55,25 +63,14 @@ public abstract class User {
         this.userInfo = userInfo;
     }
 
-    public NotificationList getUserNotfications() {
+    public NotificationList getNotficationList() {
         return userNotfications;
     }
-    public void setUserNotfications(NotificationList userNotfications) {
+    public void setNotficationList(NotificationList userNotfications) {
         this.userNotfications = userNotfications;
     }
-    
-    
-           
-    protected abstract String generateID();
-    
-    public abstract UserType getUserType();
-    
     public String toString()
     {
-        StringBuilder hold = new StringBuilder();
-        
-        hold.append(this.userInfo.toString());
-        
-        return hold.toString();
+        return this.userInfo.toString();
     }
 }

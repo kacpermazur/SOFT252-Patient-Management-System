@@ -15,6 +15,7 @@ public class Patient extends User {
 
     public Patient(Details userInfo, String userPassword) {
         super(userInfo, userPassword);
+        this.userType = UserType.PATIENT;
     }
         
     @Override
@@ -28,6 +29,6 @@ public class Patient extends User {
     @Override
     public UserType getUserType()
     {
-        return UserType.PATIENT;
+        return this.userType;
     }
 }

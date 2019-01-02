@@ -48,10 +48,11 @@ public class Notification {
     
     public String toString()
     {
-        StringBuilder hold = new StringBuilder(subjectTitle);
-        hold.append(" - ");
         DateTimeFormatter currDateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        hold.append(time.format(currDateFormat));
+        
+        StringBuilder hold = new StringBuilder(time.format(currDateFormat ));
+        hold.append(" - ");
+        hold.append(subjectTitle);
         hold.append(" - ");
         hold.append(comment);
         

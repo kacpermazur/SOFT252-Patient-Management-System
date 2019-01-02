@@ -33,7 +33,7 @@ public class NotificationList implements Iterable<Notification>{
         return isAdded;
     }
     
-    public Notification getNotificationByTitle(String value)
+    public Notification getByTitle(String value)
     {
         Notification searchNotification;
         

@@ -5,6 +5,7 @@
  */
 package patientmanagementsystem;
 
+import usermodel.users.User;
 import java.time.LocalDateTime;
 import usermodel.*;
 import usermodel.users.Patient;
@@ -24,7 +25,7 @@ public class main {
         Details inputDet = new Details("Joe", "Smith");
         Address inputAdd = new Address("Build Name", "Street Name", "Plymouth", "PL1 1AA");
         
-        inputDet.setUserAddress(inputAdd);
+        inputDet.setAddress(inputAdd);
         
         User test = new Patient(inputDet, "pass123");
         
@@ -33,7 +34,7 @@ public class main {
         System.out.println(test.getUserType());
         System.out.println("Current User Count: " + User.getUnqiueUserCount());
         
-        User test2 = new Patient(inputDet, "pass123");
+       // User test2 = new Patient(inputDet, "pass123");
         System.out.println("Current User Count: " + User.getUnqiueUserCount());
         System.out.println("Current User Count: " + User.getUnqiueUserCount());
         
@@ -43,13 +44,13 @@ public class main {
         Notification abcd = new Notification(date, "dab", "dab on it");
         Notification abcde = new Notification(date, "frog", "check frogs");
         
-        test.getUserNotfications().addNotification(abc);
-        test.getUserNotfications().addNotification(abcd);
-        test.getUserNotfications().addNotification(abcde);
+        test.getNotficationList().addNotification(abc);
+        test.getNotficationList().addNotification(abcd);
+        test.getNotficationList().addNotification(abcde);
         
-        System.out.println(abc.toString());
+        System.out.println(abcd.toString());
         
-        System.out.println(test.getUserNotfications().getNotificationByTitle("dab").toString());
+        System.out.println(test.getNotficationList().getByTitle("dab").toString());
         //System.out.println(test2.getUserNotfications().getNotificationByTitle("dab").toString());
     }
     
