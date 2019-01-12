@@ -31,9 +31,9 @@ public class appointmentUI extends javax.swing.JFrame {
         lblAppointmentTitle = new javax.swing.JLabel();
         lblUserName = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jcpCalender = new com.toedter.calendar.JCalendar();
         btnCancel = new javax.swing.JButton();
         btnMakeAppointment = new javax.swing.JButton();
+        jCalendar1 = new com.toedter.calendar.JCalendar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,16 +49,6 @@ public class appointmentUI extends javax.swing.JFrame {
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-
-        jcpCalender.setBackground(new java.awt.Color(143, 174, 177));
-        jcpCalender.setForeground(new java.awt.Color(255, 255, 255));
-        jcpCalender.setDecorationBackgroundColor(new java.awt.Color(255, 255, 255));
-        jcpCalender.setDecorationBackgroundVisible(false);
-        jcpCalender.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jcpCalender.setMaxSelectableDate(new java.util.Date(253370768517000L));
-        jcpCalender.setMinSelectableDate(new java.util.Date(-62135765883000L));
-        jcpCalender.setSundayForeground(new java.awt.Color(255, 255, 255));
-        jcpCalender.setWeekdayForeground(new java.awt.Color(255, 255, 255));
 
         btnCancel.setBackground(new java.awt.Color(255, 255, 255));
         btnCancel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -83,16 +73,18 @@ public class appointmentUI extends javax.swing.JFrame {
                                 .addComponent(lblAppointmentTitle)
                                 .addGap(18, 18, 18)
                                 .addComponent(lblUserName))
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(pnlAppointmentPickerLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(pnlAppointmentPickerLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addGroup(pnlAppointmentPickerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAppointmentPickerLayout.createSequentialGroup()
+                            .addComponent(jCalendar1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addGroup(pnlAppointmentPickerLayout.createSequentialGroup()
                                 .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnMakeAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jcpCalender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(29, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnMakeAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap())
         );
         pnlAppointmentPickerLayout.setVerticalGroup(
             pnlAppointmentPickerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,13 +95,13 @@ public class appointmentUI extends javax.swing.JFrame {
                     .addComponent(lblUserName))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jCalendar1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jcpCalender, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlAppointmentPickerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancel)
                     .addComponent(btnMakeAppointment))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -164,8 +156,8 @@ public class appointmentUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnMakeAppointment;
+    private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JSeparator jSeparator1;
-    private com.toedter.calendar.JCalendar jcpCalender;
     private javax.swing.JLabel lblAppointmentTitle;
     private javax.swing.JLabel lblUserName;
     private javax.swing.JPanel pnlAppointmentPicker;
