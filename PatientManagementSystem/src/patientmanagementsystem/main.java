@@ -19,11 +19,6 @@ public class main {
      */
     public static void main(String[] args) {
         
-       mainMenuUI main = new mainMenuUI();
-       perscriptionUI dab = new perscriptionUI();
-       
-       dab.setVisible(true);
-       
     }
     
 }
