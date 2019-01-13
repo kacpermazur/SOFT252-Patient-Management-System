@@ -6,6 +6,7 @@
 package usermodel;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 /**
  *
@@ -22,6 +23,11 @@ public class Details {
         this.surname = surname;
         this.birthDate = birthDate;
         this.password = password;
+    }
+    
+    public Integer getAge()
+    {
+        return Period.between(birthDate, LocalDate.now()).getYears();
     }
     
     public String getName() {
@@ -56,5 +62,16 @@ public class Details {
         this.password = password;
     }
     
-    
+    public String ToText()
+    {
+        StringBuilder hold = new StringBuilder();
+        
+        hold.append(this.name);
+        hold.append(" - ");
+        hold.append(this.surname);
+        hold.append(" - ");
+        hold.append(this.birthDate);
+        
+        return hold.toString();
+    }
 }

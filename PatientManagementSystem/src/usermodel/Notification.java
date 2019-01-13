@@ -48,9 +48,9 @@ public class Notification {
     
     public String toString()
     {
-        DateTimeFormatter currDateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter temp = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         
-        StringBuilder hold = new StringBuilder(date.format(currDateFormat ));
+        StringBuilder hold = new StringBuilder(date.format(temp ));
         hold.append(" - ");
         hold.append(subjectTitle);
         hold.append(" - ");

@@ -6,28 +6,27 @@
 package usermodel;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
  *
  * @author kacper
  */
-public class NotificationList implements Iterable<Notification>{
+public class NotificationList{
     
-    private final List<Notification> notificationData;
+    private final List<Notification> notifications;
 
     public NotificationList() {
-        notificationData = new ArrayList<>();
+        notifications = new ArrayList<>();
     }
     
-    public boolean addNotification(Notification currNotfication)
+    public boolean add(Notification currNotfication)
     {
         boolean isAdded = false;
         
         if(currNotfication != null)
         {
-            isAdded = notificationData.add(currNotfication);
+            isAdded = notifications.add(currNotfication);
         }
         
         return isAdded;
@@ -37,15 +36,9 @@ public class NotificationList implements Iterable<Notification>{
     {
         Notification searchNotification;
         
-        return searchNotification = notificationData.stream()
+        return searchNotification = notifications.stream()
                 .filter(Notification -> value.equals(Notification.getSubjectTitle()))
                 .findAny()
                 .orElse(null);
-    }
-    
-    @Override
-    public Iterator<Notification> iterator()
-    {
-        return notificationData.iterator();
     }
 }
