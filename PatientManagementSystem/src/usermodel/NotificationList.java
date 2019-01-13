@@ -32,6 +32,18 @@ public class NotificationList{
         return isAdded;
     }
     
+    public boolean Clear()
+    {
+         boolean isAdded = false;
+         
+         if(!notifications.isEmpty())
+         {
+            isAdded =  notifications.containsAll(notifications);
+         }
+         
+         return isAdded;
+    }
+    
     public Notification getByTitle(String value)
     {
         Notification searchNotification;

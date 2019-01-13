@@ -13,12 +13,14 @@ import java.time.Period;
  * @author kacper
  */
 public class Details {
+    private String iD;
     private String name;
     private String surname;
     private LocalDate birthDate;
     private String password;
 
-    public Details(String name, String surname, LocalDate birthDate, String password) {
+    public Details(String iD, String name, String surname, LocalDate birthDate, String password) {
+        this.iD = iD;
         this.name = name;
         this.surname = surname;
         this.birthDate = birthDate;
@@ -28,6 +30,14 @@ public class Details {
     public Integer getAge()
     {
         return Period.between(birthDate, LocalDate.now()).getYears();
+    }
+
+    public String getiD() {
+        return iD;
+    }
+
+    public void setiD(String iD) {
+        this.iD = iD;
     }
     
     public String getName() {
@@ -71,6 +81,8 @@ public class Details {
         hold.append(this.surname);
         hold.append(" - ");
         hold.append(this.birthDate);
+        hold.append(" - ");
+        hold.append(this.getAge());
         
         return hold.toString();
     }
