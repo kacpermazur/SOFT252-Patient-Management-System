@@ -54,5 +54,20 @@ public class Perscription {
         this.notes = notes;
     }
     
-    
+    public String ToString()
+    {
+        StringBuilder hold = new StringBuilder();
+        
+        hold.append(this.perscribedMedicine.ToString());
+        hold.append(" - ");
+        hold.append(this.dosage);
+        
+        if (this.notes != null)
+        {
+            hold.append(" - ");
+            hold.append(this.notes);
+        }
+        
+        return hold.toString();
+    }
 }

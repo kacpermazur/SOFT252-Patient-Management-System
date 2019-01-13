@@ -43,5 +43,14 @@ public class Medicine {
         this.qunatity = qunatity;
     }
     
-    
+    public String ToString()
+    {
+        StringBuilder hold = new StringBuilder();
+        
+        hold.append(this.name);
+        hold.append(" - ");
+        hold.append(this.qunatity);
+        
+        return hold.toString();
+    }
 }
