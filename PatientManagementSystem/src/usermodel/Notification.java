@@ -5,7 +5,7 @@
  */
 package usermodel;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 
@@ -15,21 +15,21 @@ import java.time.format.DateTimeFormatter;
  */
 public class Notification {
     
-    private LocalDateTime time;
+    private LocalDate date;
     private String subjectTitle;
     private String comment;
 
-    public Notification(LocalDateTime time, String subjectTitle, String Comment) {
-        this.time = time;
+    public Notification(LocalDate time, String subjectTitle, String Comment) {
+        this.date = time;
         this.subjectTitle = subjectTitle;
         this.comment = Comment;
     }
 
-    public LocalDateTime getTime() {
-        return time;
+    public LocalDate getTime() {
+        return date;
     }
-    public void setTime(LocalDateTime time) {
-        this.time = time;
+    public void setTime(LocalDate time) {
+        this.date = time;
     }
 
     public String getSubjectTitle() {
@@ -50,7 +50,7 @@ public class Notification {
     {
         DateTimeFormatter currDateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         
-        StringBuilder hold = new StringBuilder(time.format(currDateFormat ));
+        StringBuilder hold = new StringBuilder(date.format(currDateFormat ));
         hold.append(" - ");
         hold.append(subjectTitle);
         hold.append(" - ");
