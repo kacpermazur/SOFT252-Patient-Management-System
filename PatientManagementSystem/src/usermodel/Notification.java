@@ -48,13 +48,13 @@ public class Notification {
     
     public String toString()
     {
-        DateTimeFormatter temp = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        StringBuilder hold = new StringBuilder();
         
-        StringBuilder hold = new StringBuilder(date.format(temp ));
+        hold.append(this.date);
         hold.append(" - ");
-        hold.append(subjectTitle);
+        hold.append(this.subjectTitle);
         hold.append(" - ");
-        hold.append(comment);
+        hold.append(this.comment);
         
         return hold.toString();
     }

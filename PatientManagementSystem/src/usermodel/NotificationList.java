@@ -41,4 +41,16 @@ public class NotificationList{
                 .findAny()
                 .orElse(null);
     }
+    
+    public String ToString()
+    {
+        StringBuilder hold = new StringBuilder();
+        
+        for (Notification currNotify : notifications)
+        {
+            hold.append(currNotify + "\n");
+        }
+        
+        return hold.toString();
+    }
 }
