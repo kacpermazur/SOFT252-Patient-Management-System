@@ -5,12 +5,10 @@
  */
 package usermodel.users;
 
-import usermodel.*;
-
 /**
  *
  * @author kacper
  */
-public abstract class User {
+public class Patient extends User{
     
 }

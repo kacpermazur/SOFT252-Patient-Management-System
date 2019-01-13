@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package usermodel.users;
-
-import usermodel.*;
+package usermodel;
 
 /**
  *
  * @author kacper
  */
-public abstract class User {
+public class Perscription {
     
 }
