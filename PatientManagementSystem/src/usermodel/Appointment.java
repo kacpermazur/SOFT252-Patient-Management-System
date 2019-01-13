@@ -23,6 +23,45 @@ public class Appointment {
     public Appointment(Doctor doctor, Patient patient, LocalDate date) {
         // ToDo: Set ID From Doctor & Patient Class when finished
     }
+
+    public Appointment(String doctorID, String patientID, LocalDate date) {
+        this.doctorID = doctorID;
+        this.patientID = patientID;
+        this.date = date;
+    }
+
+    public String getDoctorID() {
+        return doctorID;
+    }
+
+    public String getPatientID() {
+        return patientID;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public Perscription getPerscription() {
+        return perscription;
+    }
     
-    
+    public String ToSring()
+    {
+        StringBuilder hold = new StringBuilder();
+        
+        hold.append(this.doctorID);
+        hold.append("\n");
+        hold.append(this.patientID);
+        hold.append("\n");
+        hold.append(this.date);
+        
+        if (this.perscription != null)
+        {
+            hold.append("\n");
+            hold.append(this.perscription);
+        }
+        
+        return hold.toString();
+    }
 }
