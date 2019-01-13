@@ -46,7 +46,7 @@ public class Notification {
         this.comment = Comment;
     }
     
-    public String toString()
+    public String ToString()
     {
         StringBuilder hold = new StringBuilder();
         

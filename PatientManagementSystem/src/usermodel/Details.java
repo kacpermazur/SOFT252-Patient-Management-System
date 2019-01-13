@@ -76,6 +76,8 @@ public class Details {
     {
         StringBuilder hold = new StringBuilder();
         
+        hold.append(this.iD);
+        hold.append(" - ");
         hold.append(this.name);
         hold.append(" - ");
         hold.append(this.surname);

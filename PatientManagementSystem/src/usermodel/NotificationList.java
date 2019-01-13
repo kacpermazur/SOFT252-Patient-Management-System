@@ -34,14 +34,14 @@ public class NotificationList{
     
     public boolean Clear()
     {
-         boolean isAdded = false;
+         boolean isCleared = false;
          
          if(!notifications.isEmpty())
          {
-            isAdded =  notifications.containsAll(notifications);
+            isCleared =  notifications.containsAll(notifications);
          }
          
-         return isAdded;
+         return isCleared;
     }
     
     public Notification getByTitle(String value)
@@ -60,7 +60,7 @@ public class NotificationList{
         
         for (Notification currNotify : notifications)
         {
-            hold.append(currNotify + "\n");
+            hold.append(currNotify.ToString() + "\n");
         }
         
         return hold.toString();
