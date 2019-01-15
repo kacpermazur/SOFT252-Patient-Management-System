@@ -5,12 +5,24 @@
  */
 package usermodel.users;
 
-import usermodel.*;
+import usermodel.Data;
+
 
 /**
  *
  * @author kacper
  */
 public abstract class User {
+    
+    protected Data userData;
+
+    public Data getUserData() {
+        return userData;
+    }
+
+    public void setUserData(Data userData) {
+        this.userData = userData;
+    }
+            
     
 }
