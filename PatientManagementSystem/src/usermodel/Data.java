@@ -5,13 +5,13 @@
  */
 package usermodel;
 
-import java.util.List;
+import java.io.Serializable;
 
 /**
  *
  * @author kacper
  */
-public class Data {
+public class Data implements Serializable {
     
     // Default Data;
     private Details details;
@@ -28,4 +28,70 @@ public class Data {
     
     // Sectary Data
     private static AppointmentList requestedAppointments;
+
+    public Details getDetails() {
+        return details;
+    }
+
+    public void setDetails(Details details) {
+        this.details = details;
+    }
+
+    public Address getAdress() {
+        return adress;
+    }
+
+    public void setAdress(Address adress) {
+        this.adress = adress;
+    }
+
+    public NotificationList getNotfications() {
+        return notfications;
+    }
+
+    public void setNotfications(NotificationList notfications) {
+        this.notfications = notfications;
+    }
+
+    public AppointmentList getHistory() {
+        return history;
+    }
+
+    public void setHistory(AppointmentList history) {
+        this.history = history;
+    }
+
+    public Appointment getActiveAppointment() {
+        return activeAppointment;
+    }
+
+    public void setActiveAppointment(Appointment activeAppointment) {
+        this.activeAppointment = activeAppointment;
+    }
+
+    public Perscription getActivePerscription() {
+        return activePerscription;
+    }
+
+    public void setActivePerscription(Perscription activePerscription) {
+        this.activePerscription = activePerscription;
+    }
+
+    public AppointmentList getActivePatientAppointments() {
+        return activePatientAppointments;
+    }
+
+    public void setActivePatientAppointments(AppointmentList activePatientAppointments) {
+        this.activePatientAppointments = activePatientAppointments;
+    }
+
+    public static AppointmentList getRequestedAppointments() {
+        return requestedAppointments;
+    }
+
+    public static void setRequestedAppointments(AppointmentList requestedAppointments) {
+        Data.requestedAppointments = requestedAppointments;
+    }
+    
+    
 }
