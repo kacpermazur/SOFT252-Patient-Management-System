@@ -5,26 +5,27 @@
  */
 package singleton;
 
+import Observer.NotificationManger;
 import java.io.*;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
-import usermodel.Address;
-import usermodel.Details;
+import usermodel.IInitialize;
 import usermodel.users.User;
 
 /**
  *
  * @author kacper
  */
-public class UserManger {
+public class UserManger implements IInitialize
+{
+    private volatile static UserManger _instance;
     
-    private List<User> UserList = new ArrayList<>();
-    
+    private List<User> UserList;
     private final File FILENAME = new File ("UserDataList.bigchungus");
     
-    private volatile static UserManger _instance;
+    private NotificationManger notficationManger;
         
     public static UserManger getInstance()
     {
@@ -40,6 +41,12 @@ public class UserManger {
         }
         return _instance;
     }
+
+    @Override
+    public void initialize() 
+    {
+        UserList = new ArrayList<>();
+    }    
     
     public User login(String id, String password)
     {
