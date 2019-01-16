@@ -6,7 +6,10 @@
 package usermodel.users;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import usermodel.Address;
 import usermodel.Data;
+import usermodel.Details;
 
 
 /**
@@ -15,8 +18,12 @@ import usermodel.Data;
  */
 public abstract class User implements Serializable{
     
-    private Data userData = new Data();
+    protected Data userData = new Data();
 
+    public User(Details userDetails, Address userAddress) {
+        this.userData.setDetails(userDetails);
+        this.userData.setAdress(userAddress);
+    }
     public Data getUserData() {
         return userData;
     }

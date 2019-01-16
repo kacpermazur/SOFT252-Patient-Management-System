@@ -65,6 +65,12 @@ public class UserManger {
         return UserList.remove(user);
     }
     
+    public void clear()
+    {
+         
+        UserList.clear();
+    }
+    
     public User getById(String userID)
     {
         User temp;
@@ -84,6 +90,8 @@ public class UserManger {
             
             serializeOBJ.writeObject(UserList);
             serializeOBJ.close();
+            
+            System.out.println("Saved!");
         }
         catch (FileNotFoundException ex)
         {
@@ -104,6 +112,8 @@ public class UserManger {
             
             UserList = (List<User>)deserializeOBJ.readObject();
             deserializeOBJ.close();
+            
+            System.out.println("Loaded!");
         }
         catch (FileNotFoundException ex)
         {

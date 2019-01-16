@@ -5,10 +5,18 @@
  */
 package usermodel.users;
 
+import usermodel.Address;
+import usermodel.Details;
+
 /**
  *
  * @author kacper
  */
 public class Patient extends User{
+
+    public Patient(Details userDetails, Address userAddress) {
+        super(userDetails, userAddress);
+    }
+    
     
 }

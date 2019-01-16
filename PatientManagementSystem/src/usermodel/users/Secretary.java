@@ -5,10 +5,17 @@
  */
 package usermodel.users;
 
+import usermodel.Address;
+import usermodel.Details;
+
 /**
  *
  * @author kacper
  */
 public class Secretary extends User{
+
+    public Secretary(Details userDetails, Address userAddress) {
+        super(userDetails, userAddress);
+    }
     
 }

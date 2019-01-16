@@ -5,10 +5,17 @@
  */
 package usermodel.users;
 
+import usermodel.Address;
+import usermodel.Details;
+
 /**
  *
  * @author kacper
  */
 public class Admin extends User{
+
+    public Admin(Details userDetails, Address userAddress) {
+        super(userDetails, userAddress);
+    }
     
 }

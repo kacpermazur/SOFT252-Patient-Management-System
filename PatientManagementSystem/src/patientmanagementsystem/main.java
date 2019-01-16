@@ -5,7 +5,12 @@
  */
 package patientmanagementsystem;
 
+import java.time.LocalDate;
 import singleton.UserManger;
+import usermodel.Address;
+import usermodel.Details;
+import usermodel.users.Doctor;
+import usermodel.users.User;
 
 /**
  *
@@ -14,11 +19,33 @@ import singleton.UserManger;
 public class main {
 
     /**
-     * @param args the command line arguments
+     * @param args the command line arguments"
      */
     public static void main(String[] args) {
         
-        UserManger.getInstance().register(new Patient(), 'P');
+        Details dets = new Details("testName", "testSurname", LocalDate.now(), "password");
+        Address add = new Address("Building", "road", "City", "postcode");
+        
+        User test = new Doctor(dets, add);
+        
+        UserManger.getInstance().register(test, 'D');
+        UserManger.getInstance().register(test, 'D');
+        UserManger.getInstance().register(test, 'D');
+        UserManger.getInstance().register(test, 'D');
+        UserManger.getInstance().register(test, 'D');
+        
+        System.out.println(UserManger.getInstance().ToString());
+        
+        UserManger.getInstance().serialize();
+        
+        UserManger.getInstance().clear();
+        
+        System.out.println("Cleared List");
+        System.out.println(UserManger.getInstance().ToString());
+        
+        UserManger.getInstance().deserialize();
+        System.out.println("Loaded List");
+        System.out.println(UserManger.getInstance().ToString());
     }
     
 }

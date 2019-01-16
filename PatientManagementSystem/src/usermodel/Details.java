@@ -19,6 +19,13 @@ public class Details implements Serializable{
     private String surname;
     private LocalDate birthDate;
     private String password;
+    
+    public Details(String name, String surname, LocalDate birthDate, String password) {
+        this.name = name;
+        this.surname = surname;
+        this.birthDate = birthDate;
+        this.password = password;
+    }
 
     public Details(String iD, String name, String surname, LocalDate birthDate, String password) {
         this.iD = iD;
