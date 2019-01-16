@@ -15,5 +15,14 @@ import usermodel.Data;
 public abstract class User {
     
     protected Data userData = new Data();
+
+    public Data getUserData() {
+        return userData;
+    }
+
+    public void setUserData(Data userData) {
+        this.userData = userData;
+    }
+    
     
 }

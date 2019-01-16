@@ -5,9 +5,6 @@
  */
 package patientmanagementsystem;
 
-import guiview.*;
-
-
 /**
  *
  * @author kacper
@@ -19,6 +16,7 @@ public class main {
      */
     public static void main(String[] args) {
         
+       
     }
     
 }
