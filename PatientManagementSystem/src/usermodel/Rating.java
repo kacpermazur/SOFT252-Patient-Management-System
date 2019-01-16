@@ -5,11 +5,13 @@
  */
 package usermodel;
 
+import java.io.Serializable;
+
 /**
  *
  * @author kacper
  */
-public class Rating {
+public class Rating implements Serializable{
     private Integer rating;
     private String comment; 
 

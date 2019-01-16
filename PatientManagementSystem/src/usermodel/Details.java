@@ -5,6 +5,7 @@
  */
 package usermodel;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -12,7 +13,7 @@ import java.time.Period;
  *
  * @author kacper
  */
-public class Details {
+public class Details implements Serializable{
     private String iD;
     private String name;
     private String surname;

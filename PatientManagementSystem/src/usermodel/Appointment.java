@@ -5,6 +5,7 @@
  */
 package usermodel;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import usermodel.users.Doctor;
 import usermodel.users.Patient;
@@ -13,7 +14,7 @@ import usermodel.users.Patient;
  *
  * @author kacper
  */
-public class Appointment {
+public class Appointment implements Serializable{
     
     private String doctorID;
     private String patientID;

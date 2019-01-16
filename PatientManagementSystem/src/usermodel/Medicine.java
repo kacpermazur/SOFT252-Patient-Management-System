@@ -5,11 +5,13 @@
  */
 package usermodel;
 
+import java.io.Serializable;
+
 /**
  *
  * @author kacper
  */
-public class Medicine {
+public class Medicine implements Serializable{
     private String name;
     private Integer qunatity;
 

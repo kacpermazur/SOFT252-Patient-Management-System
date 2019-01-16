@@ -5,11 +5,13 @@
  */
 package usermodel;
 
+import java.io.Serializable;
+
 /**
  *
  * @author kacper
  */
-public class Perscription {
+public class Perscription implements Serializable{
     private Medicine perscribedMedicine;
     private String dosage;
     private String notes;

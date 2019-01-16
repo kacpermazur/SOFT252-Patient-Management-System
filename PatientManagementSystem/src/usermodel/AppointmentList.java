@@ -5,6 +5,7 @@
  */
 package usermodel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  *
  * @author kacper
  */
-public class AppointmentList {
+public class AppointmentList implements Serializable{
     
     private final List<Appointment> appointments;
 

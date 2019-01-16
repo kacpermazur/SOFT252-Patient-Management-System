@@ -5,11 +5,13 @@
  */
 package usermodel;
 
+import java.io.Serializable;
+
 /**
  *
  * @author kacper
  */
-public class Address {
+public class Address implements Serializable{
     private String building;
     private String road;
     private String city;

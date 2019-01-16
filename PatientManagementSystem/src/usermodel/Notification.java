@@ -5,6 +5,7 @@
  */
 package usermodel;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -13,7 +14,7 @@ import java.time.format.DateTimeFormatter;
  *
  * @author kacper
  */
-public class Notification {
+public class Notification implements Serializable{
     
     private LocalDate date;
     private String subjectTitle;
