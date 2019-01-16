@@ -33,7 +33,7 @@ public class AppointmentList implements Serializable{
         return isAdded;
     }
     
-    public boolean Clear()
+    public boolean clear()
     {
          boolean isCleared= false;
          
@@ -45,11 +45,21 @@ public class AppointmentList implements Serializable{
          return isCleared;
     }
     
-    public boolean MoveTo()
+    public boolean moveTo(Appointment appointment, List<Appointment> target)
     {
         boolean isMoved = false;
         
+        isMoved = target.add(appointment);
+        
+        if(isMoved)
+            remove(appointment);
+        
         return isMoved;
+    }
+    
+    public boolean remove(Appointment appointment)
+    {
+        return appointments.remove(appointment);
     }
     
     public Appointment getByPatientID(String id)

@@ -5,7 +5,7 @@
  */
 package patientmanagementsystem;
 
-import usermodel.users.*;
+import singleton.UserManger;
 
 /**
  *
@@ -18,7 +18,7 @@ public class main {
      */
     public static void main(String[] args) {
         
-
+        UserManger.getInstance().register(new Patient(), 'P');
     }
     
 }

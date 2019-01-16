@@ -53,12 +53,16 @@ public class UserManger {
         return null;
     }
     
-    public boolean register(User user, Details userDetails, Address userAddress)
+    public boolean register(User user, char type)
     {
-        user.getUserData().setDetails(userDetails);
-        user.getUserData().setAdress(userAddress);
+        user.getUserData().getDetails().setiD(generateID(type));
         
         return UserList.add(user);
+    }
+    
+    public boolean deleteUser(User user)
+    {
+        return UserList.remove(user);
     }
     
     public User getById(String userID)
@@ -115,10 +119,25 @@ public class UserManger {
         }
     }
     
-    private String generateID(char c)
+    public String ToString()
+    {
+        StringBuilder temp = new StringBuilder();
+        
+        for(User u : UserList )
+        {
+            temp.append(u.getUserData().getDetails().ToText());
+            temp.append("\n");
+        }
+        
+        return temp.toString();
+    }
+    
+    private String generateID(char type)
     { 
+        
         NumberFormat nf = new DecimalFormat("000");
         
-        return c + nf.format(UserList.size());
+        return type + nf.format(UserList.size());
     }
+    
 }

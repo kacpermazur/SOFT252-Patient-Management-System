@@ -15,7 +15,7 @@ import usermodel.Data;
  */
 public abstract class User implements Serializable{
     
-    protected Data userData = new Data();
+    private Data userData = new Data();
 
     public Data getUserData() {
         return userData;
