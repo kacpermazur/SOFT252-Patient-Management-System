@@ -5,6 +5,8 @@
  */
 package patientmanagementsystem;
 
+import usermodel.users.*;
+
 /**
  *
  * @author kacper
@@ -16,7 +18,7 @@ public class main {
      */
     public static void main(String[] args) {
         
-       
+
     }
     
 }

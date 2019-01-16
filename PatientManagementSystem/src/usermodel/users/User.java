@@ -24,6 +24,4 @@ public abstract class User implements Serializable{
     public void setUserData(Data userData) {
         this.userData = userData;
     }
-    
-    
 }

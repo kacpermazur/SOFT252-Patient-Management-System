@@ -5,6 +5,7 @@
  */
 package singleton;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import usermodel.users.User;
@@ -16,6 +17,8 @@ import usermodel.users.User;
 public class UserManger {
     
     private List<User> UserList = new ArrayList<>();
+    
+    private final File FILENAME = new File ("UserDataList.bigchungus");
     
     private volatile static UserManger _instance;
         
@@ -32,5 +35,49 @@ public class UserManger {
             }
         }
         return _instance;
+    }
+    
+    public void Serialize()
+    {
+        try
+        {
+            FileOutputStream serialize = new FileOutputStream(FILENAME);
+            ObjectOutputStream serializeOBJ = new ObjectOutputStream(serialize);
+            
+            serializeOBJ.writeObject(UserList);
+            serializeOBJ.close();
+        }
+        catch (FileNotFoundException ex)
+        {
+            ex.printStackTrace();
+        }
+        catch(IOException ex)
+        {
+            ex.printStackTrace();
+        }
+    }
+    
+    public void Deserialize()
+    {
+        try
+        {
+            FileInputStream deserialize = new FileInputStream(FILENAME);
+            ObjectInputStream deserializeOBJ = new ObjectInputStream(deserialize);
+            
+            UserList = (List<User>)deserializeOBJ.readObject();
+            deserializeOBJ.close();
+        }
+        catch (FileNotFoundException ex)
+        {
+            ex.printStackTrace();
+        }
+        catch (IOException ex)
+        {
+            ex.printStackTrace();
+        }
+        catch (ClassNotFoundException ex)
+        {
+            ex.printStackTrace();
+        }
     }
 }
