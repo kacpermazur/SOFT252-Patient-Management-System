@@ -5,14 +5,20 @@
  */
 package singleton;
 
+import java.util.ArrayList;
+import java.util.List;
+import usermodel.users.User;
+
 /**
  *
  * @author kacper
  */
 public class UserManger {
     
-    private volatile static UserManger _instance;
+    private List<User> UserList = new ArrayList<>();
     
+    private volatile static UserManger _instance;
+        
     public static UserManger getInstance()
     {
         if(_instance == null)
@@ -25,5 +31,6 @@ public class UserManger {
                 }
             }
         }
+        return _instance;
     }
 }
