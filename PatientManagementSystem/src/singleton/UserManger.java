@@ -6,8 +6,12 @@
 package singleton;
 
 import java.io.*;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import usermodel.Address;
+import usermodel.Details;
 import usermodel.users.User;
 
 /**
@@ -37,7 +41,37 @@ public class UserManger {
         return _instance;
     }
     
-    public void Serialize()
+    public User login(String id, String password)
+    {
+        User temp = getById(id);
+        
+        if(temp.getUserData().getDetails().getPassword().equals(password))
+        {
+            return temp;
+        }
+        
+        return null;
+    }
+    
+    public boolean register(User user, Details userDetails, Address userAddress)
+    {
+        user.getUserData().setDetails(userDetails);
+        user.getUserData().setAdress(userAddress);
+        
+        return UserList.add(user);
+    }
+    
+    public User getById(String userID)
+    {
+        User temp;
+        
+        return temp = UserList.stream()
+                .filter(User -> userID.equals(User.getUserData().getDetails().getiD()))
+                .findAny()
+                .orElse(null);
+    }
+    
+    public void serialize()
     {
         try
         {
@@ -57,7 +91,7 @@ public class UserManger {
         }
     }
     
-    public void Deserialize()
+    public void deserialize()
     {
         try
         {
@@ -79,5 +113,12 @@ public class UserManger {
         {
             ex.printStackTrace();
         }
+    }
+    
+    private String generateID(char c)
+    { 
+        NumberFormat nf = new DecimalFormat("000");
+        
+        return c + nf.format(UserList.size());
     }
 }
