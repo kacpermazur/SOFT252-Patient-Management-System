@@ -25,7 +25,7 @@ public class UserManger implements IInitialize
     private List<User> UserList;
     private final File FILENAME = new File ("UserDataList.bigchungus");
     
-    private NotificationManger notficationManger;
+    private NotificationManger notficationManger = new NotificationManger();
         
     public static UserManger getInstance()
     {
@@ -41,11 +41,17 @@ public class UserManger implements IInitialize
         }
         return _instance;
     }
+    
+    public static NotificationManger getNotificationManger()
+    {
+        return _instance.notficationManger;
+    }
 
     @Override
     public void initialize() 
     {
         UserList = new ArrayList<>();
+        notficationManger.initialize();
     }    
     
     public User login(String id, String password)
