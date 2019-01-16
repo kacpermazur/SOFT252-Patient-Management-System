@@ -5,6 +5,7 @@
  */
 package usermodel.users;
 
+import java.io.Serializable;
 import usermodel.Data;
 
 
@@ -12,7 +13,7 @@ import usermodel.Data;
  *
  * @author kacper
  */
-public abstract class User {
+public abstract class User implements Serializable{
     
     protected Data userData = new Data();
 
