@@ -23,6 +23,7 @@ public abstract class User implements Serializable{
     public User(Details userDetails, Address userAddress) {
         this.userData.setDetails(userDetails);
         this.userData.setAdress(userAddress);
+        
     }
     public Data getUserData() {
         return userData;

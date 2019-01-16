@@ -19,6 +19,10 @@ public class Notification implements Serializable{
     private LocalDate date;
     private String subjectTitle;
     private String comment;
+    
+    public Notification() {
+        
+    }
 
     public Notification(LocalDate time, String subjectTitle, String Comment) {
         this.date = time;

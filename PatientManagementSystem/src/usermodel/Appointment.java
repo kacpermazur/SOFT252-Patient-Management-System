@@ -20,6 +20,11 @@ public class Appointment implements Serializable{
     private String patientID;
     private LocalDate date;
     private Perscription perscription;
+    
+    public Appointment()
+    {
+        
+    }
 
     public Appointment(Doctor doctor, Patient patient, LocalDate date) {
         // ToDo: Set ID From Doctor & Patient Class when finished

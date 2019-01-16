@@ -29,6 +29,17 @@ public class Data implements Serializable {
     // Sectary Data
     private static AppointmentList requestedAppointments;
 
+    public Data() 
+    {
+        this.details = new Details();
+        this.adress = new Address();
+        this.notfications = new NotificationList();
+        this.history = new AppointmentList();
+        this.activeAppointment = new Appointment();
+        this.activePerscription = new Perscription();
+        this.activePatientAppointments = new AppointmentList();;
+    }
+
     public Details getDetails() {
         return details;
     }

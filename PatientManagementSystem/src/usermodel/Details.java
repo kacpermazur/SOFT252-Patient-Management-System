@@ -20,6 +20,10 @@ public class Details implements Serializable{
     private LocalDate birthDate;
     private String password;
     
+    public Details() {
+        
+    }
+    
     public Details(String name, String surname, LocalDate birthDate, String password) {
         this.name = name;
         this.surname = surname;

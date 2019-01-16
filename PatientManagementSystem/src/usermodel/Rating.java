@@ -14,6 +14,10 @@ import java.io.Serializable;
 public class Rating implements Serializable{
     private Integer rating;
     private String comment; 
+    
+    public Rating() {
+        
+    }
 
     public Rating(Integer rating, String comment) {
         this.rating = rating;

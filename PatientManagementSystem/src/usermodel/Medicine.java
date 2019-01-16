@@ -14,6 +14,10 @@ import java.io.Serializable;
 public class Medicine implements Serializable{
     private String name;
     private Integer qunatity;
+    
+    public Medicine() {
+        
+    }
 
     public Medicine(String name, Integer qunatity) {
         this.name = name;

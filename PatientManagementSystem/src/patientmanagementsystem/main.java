@@ -26,13 +26,19 @@ public class main {
         Details dets = new Details("testName", "testSurname", LocalDate.now(), "password");
         Address add = new Address("Building", "road", "City", "postcode");
         
+        Details dets2 = new Details("asd", "billy", LocalDate.now(), "password");
+        Address add2 = new Address("Building", "road", "City", "postcode");
+        
+        Details dets3 = new Details("spagget", "ssss", LocalDate.now(), "password");
+        Address add3 = new Address("Building", "road", "City", "postcode");
+        
         User test = new Doctor(dets, add);
+        User test2 = new Doctor(dets2, add2);
+        User test3 = new Doctor(dets3, add3);
         
         UserManger.getInstance().register(test, 'D');
-        UserManger.getInstance().register(test, 'D');
-        UserManger.getInstance().register(test, 'D');
-        UserManger.getInstance().register(test, 'D');
-        UserManger.getInstance().register(test, 'D');
+        UserManger.getInstance().register(test2, 'D');
+        UserManger.getInstance().register(test3, 'D');
         
         System.out.println(UserManger.getInstance().ToString());
         

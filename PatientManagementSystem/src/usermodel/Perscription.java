@@ -16,6 +16,10 @@ public class Perscription implements Serializable{
     private String dosage;
     private String notes;
 
+    public Perscription() {
+        
+    }
+    
     public Perscription(Medicine perscribedMedicine, String dosage) {
         this.perscribedMedicine = perscribedMedicine;
         this.dosage = dosage;
