@@ -5,9 +5,11 @@
  */
 package usermodel.users;
 
+import singleton.UserManger;
 import usermodel.Address;
 import usermodel.Details;
 import usermodel.Notification;
+import usermodel.Rating;
 
 /**
  *
@@ -24,5 +26,13 @@ public class Patient extends User{
         this.userData.getNotfications().add(notfication);
     }
     
+    public boolean requestAccount()
+    {
+        return UserManger.getInstance().register(this, 'R');
+    }
     
+    public boolean rateDoctor(String doctorID, Rating userRating)
+    {
+        
+    }
 }
