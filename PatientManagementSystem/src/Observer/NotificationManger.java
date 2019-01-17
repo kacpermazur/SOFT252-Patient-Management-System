@@ -26,7 +26,7 @@ public class NotificationManger implements iObservable, IInitialize
     {
         try
         {
-            for (User u : UserManger.getInstance().getUserTypeList('S'))
+            for (User u : UserManger.getInstance().getUserTypeInList('S'))
             {
                 registerObserver(u);
             }

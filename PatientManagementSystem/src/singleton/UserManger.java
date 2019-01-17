@@ -5,11 +5,13 @@
  */
 package singleton;
 
+import Observer.NotificationManger;
 import java.io.*;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import usermodel.IInitialize;
 import usermodel.users.User;
 
 /**
@@ -49,7 +51,7 @@ public class UserManger implements IInitialize {
     public void initialize()
     {
         UserList = new ArrayList<>();
-        notificationManger = new notificationManger();
+        notificationManger = new NotificationManger();
     }
     
     public User login(String id, String password)

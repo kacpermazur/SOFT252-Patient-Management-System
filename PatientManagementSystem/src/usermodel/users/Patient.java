@@ -53,6 +53,8 @@ public class Patient extends User{
     
     public String ViewHistory()
     {
-        return "";
+        return this.userData.getHistory().ToString();
     }
+    
+    //public 
 }
