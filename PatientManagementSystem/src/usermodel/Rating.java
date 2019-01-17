@@ -53,5 +53,14 @@ public class Rating implements Serializable{
         this.comment = comment;
     }
     
-    
+    public String ToString()
+    {
+        StringBuilder temp = new StringBuilder();
+        
+        temp.append(this.rating);
+        temp.append("\n");
+        temp.append(this.comment);
+        
+        return temp.toString();
+    }
 }

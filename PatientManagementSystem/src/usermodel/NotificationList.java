@@ -33,16 +33,9 @@ public class NotificationList implements Serializable{
         return isAdded;
     }
     
-    public boolean Clear()
+    public void Clear()
     {
-         boolean isCleared = false;
-         
-         if(!notifications.isEmpty())
-         {
-            isCleared =  notifications.containsAll(notifications);
-         }
-         
-         return isCleared;
+        notifications.clear();
     }
     
     public Notification getByTitle(String value)
