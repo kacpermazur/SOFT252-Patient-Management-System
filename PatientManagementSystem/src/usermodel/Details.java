@@ -17,6 +17,7 @@ public class Details implements Serializable{
     private String iD;
     private String name;
     private String surname;
+    private String gender;
     private LocalDate birthDate;
     private String password;
     
@@ -24,17 +25,19 @@ public class Details implements Serializable{
         
     }
     
-    public Details(String name, String surname, LocalDate birthDate, String password) {
+    public Details(String name, String surname, String gender, LocalDate birthDate, String password) {
         this.name = name;
         this.surname = surname;
+        this.gender = gender;
         this.birthDate = birthDate;
         this.password = password;
     }
 
-    public Details(String iD, String name, String surname, LocalDate birthDate, String password) {
+    public Details(String iD, String name, String surname, String gender, LocalDate birthDate, String password) {
         this.iD = iD;
         this.name = name;
         this.surname = surname;
+        this.gender = gender;
         this.birthDate = birthDate;
         this.password = password;
     }
@@ -80,6 +83,15 @@ public class Details implements Serializable{
         return password;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+    
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -93,6 +105,8 @@ public class Details implements Serializable{
         hold.append(this.name);
         hold.append(" - ");
         hold.append(this.surname);
+        hold.append(" - ");
+        hold.append(this.gender);
         hold.append(" - ");
         hold.append(this.birthDate);
         hold.append(" - ");

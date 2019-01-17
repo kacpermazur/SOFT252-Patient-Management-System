@@ -23,4 +23,6 @@ public class Patient extends User{
     public void update(Notification notfication) {
         this.userData.getNotfications().add(notfication);
     }
+    
+    
 }

@@ -26,13 +26,13 @@ public class main {
         
         UserManger.getInstance().initialize();
         
-        Details dets = new Details("testName", "testSurname", LocalDate.now(), "password");
+        Details dets = new Details("testName", "testSurname", "Male", LocalDate.now(), "password");
         Address add = new Address("Building", "road", "City", "postcode");
         
-        Details dets2 = new Details("asd", "billy", LocalDate.now(), "password");
+        Details dets2 = new Details("asd", "billy", "Male", LocalDate.now(), "password");
         Address add2 = new Address("Building", "road", "City", "postcode");
         
-        Details dets3 = new Details("spagget", "ssss", LocalDate.now(), "password");
+        Details dets3 = new Details("spagget", "ssss", "Female", LocalDate.now(), "password");
         Address add3 = new Address("Building", "road", "City", "postcode");
         
         User test = new Doctor(dets, add);
