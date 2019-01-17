@@ -3,16 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package usermodel;
+package controller;
 
 /**
  *
  * @author kacper
  */
-public interface IInitialize {
+public class UiController {
     
     /**
      *
      */
-    public void initialize();
+    public void Login(String userID, String password)
+    {
+        
+    }
 }

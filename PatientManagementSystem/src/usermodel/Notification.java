@@ -20,37 +20,77 @@ public class Notification implements Serializable{
     private String subjectTitle;
     private String comment;
     
+    /**
+     *
+     */
     public Notification() {
         
     }
 
+    /**
+     *
+     * @param time
+     * @param subjectTitle
+     * @param Comment
+     */
     public Notification(LocalDate time, String subjectTitle, String Comment) {
         this.date = time;
         this.subjectTitle = subjectTitle;
         this.comment = Comment;
     }
 
+    /**
+     *
+     * @return
+     */
     public LocalDate getTime() {
         return date;
     }
+
+    /**
+     *
+     * @param time
+     */
     public void setTime(LocalDate time) {
         this.date = time;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getSubjectTitle() {
         return subjectTitle;
     }
+
+    /**
+     *
+     * @param subjectTitle
+     */
     public void setSubjectTitle(String subjectTitle) {
         this.subjectTitle = subjectTitle;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getComment() {
         return comment;
     }
+
+    /**
+     *
+     * @param Comment
+     */
     public void setComment(String Comment) {
         this.comment = Comment;
     }
     
+    /**
+     *
+     * @return
+     */
     public String ToString()
     {
         StringBuilder hold = new StringBuilder();

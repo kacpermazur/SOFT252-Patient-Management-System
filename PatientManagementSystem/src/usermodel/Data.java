@@ -30,6 +30,9 @@ public class Data implements Serializable {
     // Sectary Data
     private static AppointmentList requestedAppointments;
 
+    /**
+     *
+     */
     public Data() 
     {
         this.details = new Details();
@@ -43,78 +46,155 @@ public class Data implements Serializable {
         this.requestedAppointments = new AppointmentList();
     }
 
+    /**
+     *
+     * @return
+     */
     public RatingList getDoctorRatings() {
         return doctorRatings;
     }
 
+    /**
+     *
+     * @param doctorRatings
+     */
     public void setDoctorRatings(RatingList doctorRatings) {
         this.doctorRatings = doctorRatings;
     }
     
+    /**
+     *
+     * @return
+     */
     public Details getDetails() {
         return details;
     }
 
+    /**
+     *
+     * @param details
+     */
     public void setDetails(Details details) {
         this.details = details;
     }
 
+    /**
+     *
+     * @return
+     */
     public Address getAdress() {
         return adress;
     }
 
+    /**
+     *
+     * @param adress
+     */
     public void setAdress(Address adress) {
         this.adress = adress;
     }
 
+    /**
+     *
+     * @return
+     */
     public NotificationList getNotfications() {
         return notfications;
     }
 
+    /**
+     *
+     * @param notfications
+     */
     public void setNotfications(NotificationList notfications) {
         this.notfications = notfications;
     }
 
+    /**
+     *
+     * @return
+     */
     public AppointmentList getHistory() {
         return history;
     }
 
+    /**
+     *
+     * @param history
+     */
     public void setHistory(AppointmentList history) {
         this.history = history;
     }
 
+    /**
+     *
+     * @return
+     */
     public Appointment getActiveAppointment() {
         return activeAppointment;
     }
 
+    /**
+     *
+     * @param activeAppointment
+     */
     public void setActiveAppointment(Appointment activeAppointment) {
         this.activeAppointment = activeAppointment;
     }
 
+    /**
+     *
+     * @return
+     */
     public Perscription getActivePerscription() {
         return activePerscription;
     }
 
+    /**
+     *
+     * @param activePerscription
+     */
     public void setActivePerscription(Perscription activePerscription) {
         this.activePerscription = activePerscription;
     }
 
+    /**
+     *
+     * @return
+     */
     public AppointmentList getActivePatientAppointments() {
         return activePatientAppointments;
     }
 
+    /**
+     *
+     * @param activePatientAppointments
+     */
     public void setActivePatientAppointments(AppointmentList activePatientAppointments) {
         this.activePatientAppointments = activePatientAppointments;
     }
 
+    /**
+     *
+     * @return
+     */
     public static AppointmentList getRequestedAppointments() {
         return requestedAppointments;
     }
     
+    /**
+     *
+     * @param App
+     * @return
+     */
     public static boolean addAppointmentStatic(Appointment App) {
         return requestedAppointments.add(App);
     }
 
+    /**
+     *
+     * @param requestedAppointments
+     */
     public static void setRequestedAppointments(AppointmentList requestedAppointments) {
         Data.requestedAppointments = requestedAppointments;
     }

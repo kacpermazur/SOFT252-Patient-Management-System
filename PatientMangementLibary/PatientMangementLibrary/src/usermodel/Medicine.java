@@ -15,15 +15,27 @@ public class Medicine implements Serializable{
     private String name;
     private Integer qunatity;
     
+    /**
+     *
+     */
     public Medicine() {
         
     }
 
+    /**
+     *
+     * @param name
+     * @param qunatity
+     */
     public Medicine(String name, Integer qunatity) {
         this.name = name;
         this.qunatity = qunatity;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getName() {
         if (name != null)
         {
@@ -33,10 +45,18 @@ public class Medicine implements Serializable{
         return "no name Set";
     }
 
+    /**
+     *
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getQunatity() {
         if (qunatity != null)
         {
@@ -45,10 +65,18 @@ public class Medicine implements Serializable{
         return 0;
     }
 
+    /**
+     *
+     * @param qunatity
+     */
     public void setQunatity(Integer qunatity) {
         this.qunatity = qunatity;
     }
     
+    /**
+     *
+     * @return
+     */
     public String ToString()
     {
         StringBuilder hold = new StringBuilder();

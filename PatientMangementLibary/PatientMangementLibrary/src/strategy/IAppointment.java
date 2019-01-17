@@ -13,5 +13,9 @@ import usermodel.Appointment;
  */
 public interface IAppointment {
     
+    /**
+     *
+     * @param appointment
+     */
     public void makeAppointment(Appointment appointment);
 }

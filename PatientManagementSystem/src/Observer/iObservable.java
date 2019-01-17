@@ -11,11 +11,27 @@ package Observer;
  */
 public interface iObservable 
 {
+
+    /**
+     *
+     * @param observer
+     */
     public void registerObserver(IObserver observer);
     
+    /**
+     *
+     * @param observer
+     */
     public void removeObserver(IObserver observer);
     
+    /**
+     *
+     * @param observer
+     */
     public void notifySingleObserver(IObserver observer);
     
+    /**
+     *
+     */
     public void notifyObservers();
 }

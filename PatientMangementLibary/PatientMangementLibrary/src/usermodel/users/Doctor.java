@@ -20,36 +20,69 @@ import usermodel.Perscription;
  */
 public class Doctor extends User implements IAppointment{
 
+    /**
+     *
+     * @param userDetails
+     * @param userAddress
+     */
     public Doctor(Details userDetails, Address userAddress) {
         super(userDetails, userAddress);
     }
     
+    /**
+     *
+     * @param notfication
+     */
     @Override
     public void update(Notification notfication) {
         this.userData.getNotfications().add(notfication);
     }
     
+    /**
+     *
+     * @return
+     */
     public String getAppointments()
     {
         return this.userData.getActivePatientAppointments().ToString();
     }
     
+    /**
+     *
+     * @param patient
+     * @return
+     */
     public String InspectPatientHistory(Patient patient )
     {
         return patient.getUserData().getHistory().ToString();
     }
 
+    /**
+     *
+     * @param appointment
+     */
     @Override
     public void makeAppointment(Appointment appointment) {
         IAppointment app = new PreApprovedAppointment();
         app.makeAppointment(appointment);
     }
     
+    /**
+     *
+     * @param medicine
+     * @param dosage
+     * @param notes
+     * @return
+     */
     public Perscription perscribeMedicine(Medicine medicine, String dosage, String notes)
     {
         return new Perscription(medicine, dosage, notes);
     }
     
+    /**
+     *
+     * @param medicine
+     */
     public void requestMedicine(Medicine medicine)
     {
         // TODO: InvetoryManger

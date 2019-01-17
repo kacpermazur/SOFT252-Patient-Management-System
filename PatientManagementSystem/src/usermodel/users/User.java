@@ -19,21 +19,42 @@ import usermodel.Notification;
  */
 public abstract class User implements Serializable, IObserver{
     
+    /**
+     *
+     */
     protected Data userData = new Data();
 
+    /**
+     *
+     * @param userDetails
+     * @param userAddress
+     */
     public User(Details userDetails, Address userAddress) {
         this.userData.setDetails(userDetails);
         this.userData.setAdress(userAddress);
         
     }
+
+    /**
+     *
+     * @return
+     */
     public Data getUserData() {
         return userData;
     }
 
+    /**
+     *
+     * @param userData
+     */
     public void setUserData(Data userData) {
         this.userData = userData;
     }
 
+    /**
+     *
+     * @param notfication
+     */
     @Override
     public abstract void update(Notification notfication);
     

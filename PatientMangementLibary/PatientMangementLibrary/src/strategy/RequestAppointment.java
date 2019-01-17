@@ -14,6 +14,10 @@ import usermodel.Data;
  */
 public class RequestAppointment implements IAppointment{
 
+    /**
+     *
+     * @param appointment
+     */
     @Override
     public void makeAppointment(Appointment appointment) {
         

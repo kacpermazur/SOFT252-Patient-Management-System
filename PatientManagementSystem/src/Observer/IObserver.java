@@ -13,5 +13,10 @@ import usermodel.Notification;
  */
 public interface IObserver 
 {
+
+    /**
+     *
+     * @param notfication
+     */
     public void update (Notification notfication);
 }

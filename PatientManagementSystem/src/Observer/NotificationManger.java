@@ -21,12 +21,20 @@ public class NotificationManger implements iObservable
     
     private Notification notficationToSend;
 
+    /**
+     *
+     * @param observer
+     */
     @Override
     public void registerObserver(IObserver observer) 
     {
         observers.add(observer);
     }
 
+    /**
+     *
+     * @param observer
+     */
     @Override
     public void removeObserver(IObserver observer) 
     {
@@ -38,6 +46,10 @@ public class NotificationManger implements iObservable
         }
     }
 
+    /**
+     *
+     * @param observer
+     */
     @Override
     public void notifySingleObserver(IObserver observer) 
     {
@@ -48,6 +60,9 @@ public class NotificationManger implements iObservable
         }
     }
 
+    /**
+     *
+     */
     @Override
     public void notifyObservers() 
     {
@@ -61,12 +76,21 @@ public class NotificationManger implements iObservable
         }
     }
     
+    /**
+     *
+     * @param notification
+     */
     public void setNotfication(Notification notification)
     {
         notficationToSend = notification;
         notifyObservers();
     }
     
+    /**
+     *
+     * @param notification
+     * @param observer
+     */
     public void setNotfication(Notification notification, IObserver observer)
     {
         notficationToSend = notification;

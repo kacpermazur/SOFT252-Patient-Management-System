@@ -17,10 +17,18 @@ public class AppointmentList implements Serializable{
     
     private final List<Appointment> appointments;
 
+    /**
+     *
+     */
     public AppointmentList() {
         appointments = new ArrayList<>();
     }
     
+    /**
+     *
+     * @param appointment
+     * @return
+     */
     public boolean add(Appointment appointment)
     {
         boolean isAdded = false;
@@ -33,6 +41,10 @@ public class AppointmentList implements Serializable{
         return isAdded;
     }
     
+    /**
+     *
+     * @return
+     */
     public boolean clear()
     {
          boolean isCleared= false;
@@ -45,6 +57,12 @@ public class AppointmentList implements Serializable{
          return isCleared;
     }
     
+    /**
+     *
+     * @param appointment
+     * @param target
+     * @return
+     */
     public boolean moveTo(Appointment appointment, List<Appointment> target)
     {
         boolean isMoved = false;
@@ -57,11 +75,21 @@ public class AppointmentList implements Serializable{
         return isMoved;
     }
     
+    /**
+     *
+     * @param appointment
+     * @return
+     */
     public boolean remove(Appointment appointment)
     {
         return appointments.remove(appointment);
     }
     
+    /**
+     *
+     * @param id
+     * @return
+     */
     public Appointment getByPatientID(String id)
     {
         Appointment appointment;
@@ -72,6 +100,10 @@ public class AppointmentList implements Serializable{
                 .orElse(null);
     }
     
+    /**
+     *
+     * @return
+     */
     public String ToString()
     {
         StringBuilder hold = new StringBuilder();

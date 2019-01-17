@@ -17,11 +17,19 @@ public class RatingList implements Serializable{
     
     private final List<Rating> ratings;
     
+    /**
+     *
+     */
     public RatingList()
     {
         ratings = new ArrayList<>();
     }
     
+    /**
+     *
+     * @param rating
+     * @return
+     */
     public boolean add(Rating rating)
     {
         boolean isAdded = false;
@@ -34,6 +42,10 @@ public class RatingList implements Serializable{
         return isAdded;
     }
     
+    /**
+     *
+     * @return
+     */
     public String ToString()
     {
         StringBuilder hold = new StringBuilder();

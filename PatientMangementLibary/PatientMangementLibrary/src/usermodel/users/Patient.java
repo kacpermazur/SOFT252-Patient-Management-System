@@ -21,20 +21,39 @@ import usermodel.Rating;
  */
 public class Patient extends User implements IAppointment{
     
+    /**
+     *
+     * @param userDetails
+     * @param userAddress
+     */
     public Patient(Details userDetails, Address userAddress) {
         super(userDetails, userAddress);
     }
     
+    /**
+     *
+     * @param notfication
+     */
     @Override
     public void update(Notification notfication) {
         this.userData.getNotfications().add(notfication);
     }
     
+    /**
+     *
+     * @return
+     */
     public boolean requestAccount()
     {
         return UserManger.getInstance().register(this, 'R');
     }
     
+    /**
+     *
+     * @param doctorID
+     * @param userRating
+     * @return
+     */
     public boolean rateDoctor(String doctorID, Rating userRating)
     {
         User temp = UserManger.getInstance().getById(doctorID);
@@ -42,6 +61,11 @@ public class Patient extends User implements IAppointment{
         return temp.getUserData().getDoctorRatings().add(userRating);
     }
     
+    /**
+     *
+     * @param doctorID
+     * @return
+     */
     public String viewDoctorRating(String doctorID)
     {
         User temp = UserManger.getInstance().getById(doctorID);
@@ -49,16 +73,29 @@ public class Patient extends User implements IAppointment{
         return temp.getUserData().getDoctorRatings().ToString();
     }
     
+    /**
+     *
+     * @param pastAppointmentHistory
+     * @return
+     */
     public boolean AddToHistory(Appointment pastAppointmentHistory)
     {
         return this.userData.getHistory().add(pastAppointmentHistory);
     }
     
+    /**
+     *
+     * @return
+     */
     public String ViewHistory()
     {
         return this.userData.getHistory().ToString();
     }
 
+    /**
+     *
+     * @param appointment
+     */
     @Override
     public void makeAppointment(Appointment appointment) 
     {
@@ -66,16 +103,27 @@ public class Patient extends User implements IAppointment{
         app.makeAppointment(appointment);
     }
     
+    /**
+     *
+     * @return
+     */
     public String ViewAppointment()
     {
         return this.userData.getActiveAppointment().ToSring();
     }
     
+    /**
+     *
+     * @return
+     */
     public String ViewPerscription()
     {
         return this.userData.getActivePatientAppointments().ToString();
     }
     
+    /**
+     *
+     */
     public void requestTermination()
     {
         Notification termination = new Notification(LocalDate.now(), "ACCOUNT TERMINATION",

@@ -27,6 +27,10 @@ public class UserManger implements IInitialize {
     private volatile static UserManger _instance;
     private NotificationManger notificationManger;
         
+    /**
+     *
+     * @return
+     */
     public static UserManger getInstance()
     {
         if(_instance == null)
@@ -42,11 +46,18 @@ public class UserManger implements IInitialize {
         return _instance;
     }
     
+    /**
+     *
+     * @return
+     */
     public static NotificationManger getNotificationManger()
     {
         return _instance.notificationManger;
     }
     
+    /**
+     *
+     */
     @Override
     public void initialize()
     {
@@ -54,6 +65,12 @@ public class UserManger implements IInitialize {
         notificationManger = new NotificationManger();
     }
     
+    /**
+     *
+     * @param id
+     * @param password
+     * @return
+     */
     public User login(String id, String password)
     {
         User temp = getById(id);
@@ -66,6 +83,11 @@ public class UserManger implements IInitialize {
         return null;
     }
     
+    /**
+     *
+     * @param type
+     * @return
+     */
     public List<User> getUserTypeInList(char type)
     {
         List<User> temp = null;
@@ -80,6 +102,12 @@ public class UserManger implements IInitialize {
         return temp;
     }
     
+    /**
+     *
+     * @param user
+     * @param type
+     * @return
+     */
     public boolean register(User user, char type)
     {
         user.getUserData().getDetails().setiD(generateID(type));
@@ -87,22 +115,40 @@ public class UserManger implements IInitialize {
         return UserList.add(user);
     }
     
+    /**
+     *
+     * @param user
+     * @return
+     */
     public boolean deleteUser(User user)
     {
         return UserList.remove(user);
     }
     
+    /**
+     *
+     * @param user
+     * @return
+     */
     public String getUserID(User user)
     {
         return user.getUserData().getDetails().getiD();
     }
     
+    /**
+     *
+     */
     public void clear()
     {
          
         UserList.clear();
     }
     
+    /**
+     *
+     * @param userID
+     * @return
+     */
     public User getById(String userID)
     {
         User temp;
@@ -113,6 +159,9 @@ public class UserManger implements IInitialize {
                 .orElse(null);
     }
     
+    /**
+     *
+     */
     public void serialize()
     {
         try
@@ -135,6 +184,9 @@ public class UserManger implements IInitialize {
         }
     }
     
+    /**
+     *
+     */
     public void deserialize()
     {
         try
@@ -161,6 +213,10 @@ public class UserManger implements IInitialize {
         }
     }
     
+    /**
+     *
+     * @return
+     */
     public String ToString()
     {
         StringBuilder temp = new StringBuilder();

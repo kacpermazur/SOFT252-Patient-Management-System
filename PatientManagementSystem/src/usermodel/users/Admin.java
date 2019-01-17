@@ -17,17 +17,50 @@ import usermodel.Notification;
  */
 public class Admin extends User{
 
-    public enum StaffType { ADMIN, DOCTOR, SECRETARY };
+    /**
+     *
+     */
+    public enum StaffType { 
+
+        /**
+         *
+         */
+        ADMIN, 
+
+        /**
+         *
+         */
+        DOCTOR, 
+
+        /**
+         *
+         */
+        SECRETARY };
     
+    /**
+     *
+     * @param userDetails
+     * @param userAddress
+     */
     public Admin(Details userDetails, Address userAddress) {
         super(userDetails, userAddress);
     }
     
+    /**
+     *
+     * @param notfication
+     */
     @Override
     public void update(Notification notfication) {
         this.userData.getNotfications().add(notfication);
     }
     
+    /**
+     *
+     * @param details
+     * @param address
+     * @param type
+     */
     public void createStaff(Details details, Address address, StaffType type)
     {
         switch(type)
@@ -47,17 +80,31 @@ public class Admin extends User{
         }
     }
     
+    /**
+     *
+     * @param id
+     */
     public void removeStaff(String id)
     {
         UserManger.getInstance().deleteUser(UserManger.getInstance().getById(id));
     }
     
+    /**
+     *
+     * @param doctorID
+     * @return
+     */
     public String viewRatings(String doctorID)
     {
         return UserManger.getInstance().getById(doctorID).getUserData()
                 .getDoctorRatings().ToString();
     }
     
+    /**
+     *
+     * @param doctorID
+     * @param comment
+     */
     public void provideFeedback(String doctorID, String comment)
     {
         Notification notification = new Notification(LocalDate.now(),

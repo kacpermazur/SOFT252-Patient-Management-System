@@ -21,10 +21,21 @@ public class Details implements Serializable{
     private LocalDate birthDate;
     private String password;
     
+    /**
+     *
+     */
     public Details() {
         
     }
     
+    /**
+     *
+     * @param name
+     * @param surname
+     * @param gender
+     * @param birthDate
+     * @param password
+     */
     public Details(String name, String surname, String gender, LocalDate birthDate, String password) {
         this.name = name;
         this.surname = surname;
@@ -33,6 +44,15 @@ public class Details implements Serializable{
         this.password = password;
     }
 
+    /**
+     *
+     * @param iD
+     * @param name
+     * @param surname
+     * @param gender
+     * @param birthDate
+     * @param password
+     */
     public Details(String iD, String name, String surname, String gender, LocalDate birthDate, String password) {
         this.iD = iD;
         this.name = name;
@@ -42,60 +62,115 @@ public class Details implements Serializable{
         this.password = password;
     }
     
+    /**
+     *
+     * @return
+     */
     public Integer getAge()
     {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }
 
+    /**
+     *
+     * @return
+     */
     public String getiD() {
         return iD;
     }
 
+    /**
+     *
+     * @param iD
+     */
     public void setiD(String iD) {
         this.iD = iD;
     }
     
+    /**
+     *
+     * @return
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getSurname() {
         return surname;
     }
 
+    /**
+     *
+     * @param surname
+     */
     public void setSurname(String surname) {
         this.surname = surname;
     }
 
+    /**
+     *
+     * @return
+     */
     public LocalDate getBirthDate() {
         return birthDate;
     }
 
+    /**
+     *
+     * @param birthDate
+     */
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getGender() {
         return gender;
     }
 
+    /**
+     *
+     * @param gender
+     */
     public void setGender(String gender) {
         this.gender = gender;
     }
     
-
+    /**
+     *
+     * @param password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
     
+    /**
+     *
+     * @return
+     */
     public String ToText()
     {
         StringBuilder hold = new StringBuilder();

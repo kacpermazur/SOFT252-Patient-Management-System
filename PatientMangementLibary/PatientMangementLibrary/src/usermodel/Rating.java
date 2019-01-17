@@ -15,19 +15,35 @@ public class Rating implements Serializable{
     private Integer rating;
     private String comment; 
     
+    /**
+     *
+     */
     public Rating() {
         
     }
 
+    /**
+     *
+     * @param rating
+     * @param comment
+     */
     public Rating(Integer rating, String comment) {
         this.rating = rating;
         this.comment = comment;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getRating() {
         return rating;
     }
 
+    /**
+     *
+     * @param rating
+     */
     public void setRating(Integer rating) {
         
         int lowerBoundry = 1;
@@ -45,14 +61,26 @@ public class Rating implements Serializable{
         this.rating = rating;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getComment() {
         return comment;
     }
 
+    /**
+     *
+     * @param comment
+     */
     public void setComment(String comment) {
         this.comment = comment;
     }
     
+    /**
+     *
+     * @return
+     */
     public String ToString()
     {
         StringBuilder temp = new StringBuilder();

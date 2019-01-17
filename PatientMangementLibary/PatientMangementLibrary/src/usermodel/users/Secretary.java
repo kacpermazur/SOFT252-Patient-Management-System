@@ -19,17 +19,30 @@ import usermodel.Notification;
  */
 public class Secretary extends User{
 
+    /**
+     *
+     * @param userDetails
+     * @param userAddress
+     */
     public Secretary(Details userDetails, Address userAddress) {
         super(userDetails, userAddress);
         
         UserManger.getNotificationManger().registerObserver(this);
     }
 
+    /**
+     *
+     * @param notfication
+     */
     @Override
     public void update(Notification notfication) {
         this.userData.getNotfications().add(notfication);
     }
     
+    /**
+     *
+     * @return
+     */
     public String viewWaitingAccount()
     {
         List<User> holder = UserManger.getInstance().getUserTypeInList('R');
@@ -52,6 +65,10 @@ public class Secretary extends User{
         return hold.toString();
     }
     
+    /**
+     *
+     * @param Id
+     */
     public void approveAccount(String Id)
     {
         User temp = UserManger.getInstance().getById(Id);
@@ -75,11 +92,19 @@ public class Secretary extends User{
         temp.userData.getDetails().setiD(userID);
     }
     
+    /**
+     *
+     * @return
+     */
     public String viewRequestedAppointments()
     {
         return Data.getRequestedAppointments().ToString();
     }
     
+    /**
+     *
+     * @param userID
+     */
     public void CreateAppointmentBetween(String userID)
     {
         Appointment appointment = Data.getRequestedAppointments()
@@ -91,6 +116,11 @@ public class Secretary extends User{
         Data.getRequestedAppointments().remove(appointment);
     }
    
+    /**
+     *
+     * @param ID
+     * @return
+     */
     public boolean removePatient(String ID)
     {
         User hold = UserManger.getInstance().getById(ID);

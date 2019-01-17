@@ -17,10 +17,18 @@ public class NotificationList implements Serializable{
     
     private final List<Notification> notifications;
 
+    /**
+     *
+     */
     public NotificationList() {
         notifications = new ArrayList<>();
     }
     
+    /**
+     *
+     * @param currNotfication
+     * @return
+     */
     public boolean add(Notification currNotfication)
     {
         boolean isAdded = false;
@@ -33,11 +41,19 @@ public class NotificationList implements Serializable{
         return isAdded;
     }
     
+    /**
+     *
+     */
     public void Clear()
     {
         notifications.clear();
     }
     
+    /**
+     *
+     * @param value
+     * @return
+     */
     public Notification getByTitle(String value)
     {
         Notification searchNotification;
@@ -48,6 +64,10 @@ public class NotificationList implements Serializable{
                 .orElse(null);
     }
     
+    /**
+     *
+     * @return
+     */
     public String ToString()
     {
         StringBuilder hold = new StringBuilder();

@@ -13,5 +13,10 @@ import usermodel.Notification;
  */
 public interface IObserver 
 {
+
+    /**
+     * This is implemented by the classes that and get updated from subject
+     * @param notfication notification class that holds data, title, and comment
+     */
     public void update (Notification notfication);
 }

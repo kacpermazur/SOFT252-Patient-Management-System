@@ -15,6 +15,10 @@ import usermodel.users.User;
  */
 public class PreApprovedAppointment implements IAppointment{
 
+    /**
+     *
+     * @param appointment
+     */
     @Override
     public void makeAppointment(Appointment appointment) {
         

@@ -11,5 +11,8 @@ package usermodel;
  */
 public interface IInitialize {
     
+    /**
+     *
+     */
     public void initialize();
 }

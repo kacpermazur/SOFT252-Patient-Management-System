@@ -17,9 +17,19 @@ public class Address implements Serializable{
     private String city;
     private String postCode;
     
+    /**
+     *
+     */
     public Address() {
     }
 
+    /**
+     *
+     * @param building
+     * @param road
+     * @param city
+     * @param postCode
+     */
     public Address(String building, String road, String city, String postCode) {
         this.building = building;
         this.road = road;
@@ -27,39 +37,79 @@ public class Address implements Serializable{
         this.postCode = postCode;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getBuilding() {
         
         return building;
     }
+
+    /**
+     *
+     * @param building
+     */
     public void setBuilding(String building) {
         if (building != null && !building.isEmpty())
             this.building = building;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getRoad() {
         return road;
     }
+
+    /**
+     *
+     * @param road
+     */
     public void setRoad(String road) {
         if (road != null && !road.isEmpty())
             this.road = road;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getCity() {
         return city;
     }
+
+    /**
+     *
+     * @param city
+     */
     public void setCity(String city) {
         if (city != null && !city.isEmpty())
             this.city = city;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getPostCode() {
         return postCode;
     }
+
+    /**
+     *
+     * @param postCode
+     */
     public void setPostCode(String postCode) {
         if (postCode != null && !postCode.isEmpty())
             this.postCode = postCode;
     }
     
+    /**
+     *
+     * @return
+     */
     public String toString()
     {
         StringBuilder hold = new StringBuilder();
