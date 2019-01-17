@@ -12,6 +12,7 @@ import usermodel.Appointment;
 import usermodel.Data;
 import usermodel.Details;
 import usermodel.Notification;
+import usermodel.users.Admin;
 import usermodel.users.Doctor;
 import usermodel.users.Patient;
 import usermodel.users.User;
@@ -78,6 +79,16 @@ public class main {
         
         System.out.println("=============== Check Strat");
         System.out.println(Data.getRequestedAppointments().ToString());
+        
+        
+        Details dets4 = new Details("yaYeetBoi", "EEEEEEEEEEE", "Female", LocalDate.now(), "password");
+        Address add4 = new Address("Buildingteate", "roadad", "Cityafwaf", "postcodewfawfaw");
+        
+        Admin adminTest = new Admin(dets4, add4);
+        
+        adminTest.createStaff(dets4, add4, Admin.StaffType.ADMIN);
+        
+        System.out.println(UserManger.getInstance().ToString());
     }
     
 }
