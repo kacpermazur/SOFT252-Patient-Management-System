@@ -5,6 +5,7 @@
  */
 package usermodel.users;
 
+import java.time.LocalDate;
 import singleton.UserManger;
 import strategy.IAppointment;
 import strategy.RequestAppointment;
@@ -65,5 +66,21 @@ public class Patient extends User implements IAppointment{
         app.makeAppointment(appointment);
     }
     
+    public String ViewAppointment()
+    {
+        return this.userData.getActiveAppointment().ToSring();
+    }
     
+    public String ViewPerscription()
+    {
+        return this.userData.getActivePatientAppointments().ToString();
+    }
+    
+    public void requestTermination()
+    {
+        Notification termination = new Notification(LocalDate.now(), "ACCOUNT TERMINATION",
+                this.userData.getDetails().getiD());
+                
+        UserManger.getNotificationManger().setNotfication(termination);
+    }
 }

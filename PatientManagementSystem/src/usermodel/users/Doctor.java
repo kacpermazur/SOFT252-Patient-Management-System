@@ -23,4 +23,16 @@ public class Doctor extends User{
     public void update(Notification notfication) {
         this.userData.getNotfications().add(notfication);
     }
+    
+    public String getAppointments()
+    {
+        return this.userData.getActivePatientAppointments().ToString();
+    }
+    
+    public String InspectPatientHistory(Patient patient )
+    {
+        return patient.getUserData().getHistory().ToString();
+    }
+    
+    
 }
