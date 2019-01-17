@@ -5,15 +5,20 @@
  */
 package usermodel.users;
 
+import strategy.IAppointment;
+import strategy.PreApprovedAppointment;
 import usermodel.Address;
+import usermodel.Appointment;
 import usermodel.Details;
+import usermodel.Medicine;
 import usermodel.Notification;
+import usermodel.Perscription;
 
 /**
  *
  * @author kacper
  */
-public class Doctor extends User{
+public class Doctor extends User implements IAppointment{
 
     public Doctor(Details userDetails, Address userAddress) {
         super(userDetails, userAddress);
@@ -33,6 +38,20 @@ public class Doctor extends User{
     {
         return patient.getUserData().getHistory().ToString();
     }
+
+    @Override
+    public void makeAppointment(Appointment appointment) {
+        IAppointment app = new PreApprovedAppointment();
+        app.makeAppointment(appointment);
+    }
     
+    public Perscription perscribeMedicine(Medicine medicine, String dosage, String notes)
+    {
+        return new Perscription(medicine, dosage, notes);
+    }
     
+    public void requestMedicine(Medicine medicine)
+    {
+        // TODO: InvetoryManger
+    }
 }
