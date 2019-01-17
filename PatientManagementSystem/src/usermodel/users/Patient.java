@@ -6,6 +6,8 @@
 package usermodel.users;
 
 import singleton.UserManger;
+import strategy.IAppointment;
+import strategy.RequestAppointment;
 import usermodel.Address;
 import usermodel.Appointment;
 import usermodel.Details;
@@ -16,8 +18,8 @@ import usermodel.Rating;
  *
  * @author kacper
  */
-public class Patient extends User{
-
+public class Patient extends User implements IAppointment{
+    
     public Patient(Details userDetails, Address userAddress) {
         super(userDetails, userAddress);
     }
@@ -55,6 +57,13 @@ public class Patient extends User{
     {
         return this.userData.getHistory().ToString();
     }
+
+    @Override
+    public void makeAppointment(Appointment appointment) 
+    {
+        IAppointment app = new RequestAppointment();
+        app.makeAppointment(appointment);
+    }
     
-    //public 
+    
 }

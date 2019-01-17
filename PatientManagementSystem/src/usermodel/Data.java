@@ -40,6 +40,7 @@ public class Data implements Serializable {
         this.doctorRatings = new RatingList();
         this.activePerscription = new Perscription();
         this.activePatientAppointments = new AppointmentList();;
+        this.requestedAppointments = new AppointmentList();
     }
 
     public RatingList getDoctorRatings() {
@@ -108,6 +109,10 @@ public class Data implements Serializable {
 
     public static AppointmentList getRequestedAppointments() {
         return requestedAppointments;
+    }
+    
+    public static boolean addAppointmentStatic(Appointment App) {
+        return requestedAppointments.add(App);
     }
 
     public static void setRequestedAppointments(AppointmentList requestedAppointments) {

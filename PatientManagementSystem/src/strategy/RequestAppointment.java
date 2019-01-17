@@ -17,7 +17,7 @@ public class RequestAppointment implements IAppointment{
     @Override
     public void makeAppointment(Appointment appointment) {
         
-        Data.getRequestedAppointments().add(appointment);
+        Data.addAppointmentStatic(appointment);
     }
     
     

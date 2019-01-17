@@ -8,9 +8,12 @@ package patientmanagementsystem;
 import java.time.LocalDate;
 import singleton.UserManger;
 import usermodel.Address;
+import usermodel.Appointment;
+import usermodel.Data;
 import usermodel.Details;
 import usermodel.Notification;
 import usermodel.users.Doctor;
+import usermodel.users.Patient;
 import usermodel.users.User;
 
 /**
@@ -36,7 +39,7 @@ public class main {
         Address add3 = new Address("Building", "road", "City", "postcode");
         
         User test = new Doctor(dets, add);
-        User test2 = new Doctor(dets2, add2);
+        User test2 = new Patient(dets2, add2);
         User test3 = new Doctor(dets3, add3);
         
         UserManger.getInstance().register(test, 'D');
@@ -68,8 +71,13 @@ public class main {
         UserManger.getNotificationManger().setNotfication(testNotification, test);
         
         System.out.println(test.getUserData().getNotfications().ToString());
+        Patient testing = new Patient(dets3, add3);
         
-        System.out.println();
+        Appointment newApp = new Appointment("DoctorIDhere", "PatientIDhere", LocalDate.now());
+        testing.makeAppointment(newApp);
+        
+        System.out.println("=============== Check Strat");
+        System.out.println(Data.getRequestedAppointments().ToString());
     }
     
 }
