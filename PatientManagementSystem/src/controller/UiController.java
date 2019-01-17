@@ -5,17 +5,21 @@
  */
 package controller;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author kacper
  */
-public class UiController {
+public class UiController implements ActionListener {
     
-    /**
-     *
-     */
-    public void Login(String userID, String password)
+    
+    
+    
+    @Override 
+    public void actionPerformed(ActionEvent e) 
     {
         
     }
-}
+}  

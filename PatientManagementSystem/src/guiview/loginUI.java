@@ -6,6 +6,7 @@
 package guiview;
 
 import controller.UiController;
+import java.awt.event.ActionListener;
 
 /**
  *
@@ -21,6 +22,10 @@ public class loginUI extends javax.swing.JFrame {
     public loginUI(UiController controller) {
         initComponents();
         _controller = controller;
+    }
+    
+    public void addButtonHandlerStrategy(ActionListener start){
+        jOrderButton.addActionListener(start);
     }
 
     /**

@@ -28,67 +28,69 @@ public class main {
      */
     public static void main(String[] args) {
         
-        UserManger.getInstance().initialize();
+          Login
         
-        Details dets = new Details("testName", "testSurname", "Male", LocalDate.now(), "password");
-        Address add = new Address("Building", "road", "City", "postcode");
-        
-        Details dets2 = new Details("asd", "billy", "Male", LocalDate.now(), "password");
-        Address add2 = new Address("Building", "road", "City", "postcode");
-        
-        Details dets3 = new Details("spagget", "ssss", "Female", LocalDate.now(), "password");
-        Address add3 = new Address("Building", "road", "City", "postcode");
-        
-        User test = new Doctor(dets, add);
-        User test2 = new Patient(dets2, add2);
-        User test3 = new Doctor(dets3, add3);
-        
-        UserManger.getInstance().register(test, 'D');
-        UserManger.getInstance().register(test2, 'D');
-        UserManger.getInstance().register(test3, 'D');
-        
-        System.out.println(UserManger.getInstance().ToString());
-        
-        UserManger.getInstance().serialize();
-        
-        UserManger.getInstance().clear();
-        
-        System.out.println("Cleared List");
-        System.out.println(UserManger.getInstance().ToString());
-        
-        UserManger.getInstance().deserialize();
-        System.out.println("Loaded List");
-        System.out.println(UserManger.getInstance().ToString());
-        
-        System.out.println("=================================================");
-        
-        Notification testNotification = new Notification(LocalDate.now(), "Title: Spaggget", "UR a spagget");
-        
-        System.out.println(test.getUserData().getNotfications().ToString());
-        
-        System.out.println("=============== SEND BY OBSER");
-        
-        
-        UserManger.getNotificationManger().setNotfication(testNotification, test);
-        
-        System.out.println(test.getUserData().getNotfications().ToString());
-        Patient testing = new Patient(dets3, add3);
-        
-        Appointment newApp = new Appointment("DoctorIDhere", "PatientIDhere", LocalDate.now());
-        testing.makeAppointment(newApp);
-        
-        System.out.println("=============== Check Strat");
-        System.out.println(Data.getRequestedAppointments().ToString());
-        
-        
-        Details dets4 = new Details("yaYeetBoi", "EEEEEEEEEEE", "Female", LocalDate.now(), "password");
-        Address add4 = new Address("Buildingteate", "roadad", "Cityafwaf", "postcodewfawfaw");
-        
-        Admin adminTest = new Admin(dets4, add4);
-        
-        adminTest.createStaff(dets4, add4, Admin.StaffType.ADMIN);
-        
-        System.out.println(UserManger.getInstance().ToString());
+//        UserManger.getInstance().initialize();
+//        
+//        Details dets = new Details("testName", "testSurname", "Male", LocalDate.now(), "password");
+//        Address add = new Address("Building", "road", "City", "postcode");
+//        
+//        Details dets2 = new Details("asd", "billy", "Male", LocalDate.now(), "password");
+//        Address add2 = new Address("Building", "road", "City", "postcode");
+//        
+//        Details dets3 = new Details("spagget", "ssss", "Female", LocalDate.now(), "password");
+//        Address add3 = new Address("Building", "road", "City", "postcode");
+//        
+//        User test = new Doctor(dets, add);
+//        User test2 = new Patient(dets2, add2);
+//        User test3 = new Doctor(dets3, add3);
+//        
+//        UserManger.getInstance().register(test, 'D');
+//        UserManger.getInstance().register(test2, 'D');
+//        UserManger.getInstance().register(test3, 'D');
+//        
+//        System.out.println(UserManger.getInstance().ToString());
+//        
+//        UserManger.getInstance().serialize();
+//        
+//        UserManger.getInstance().clear();
+//        
+//        System.out.println("Cleared List");
+//        System.out.println(UserManger.getInstance().ToString());
+//        
+//        UserManger.getInstance().deserialize();
+//        System.out.println("Loaded List");
+//        System.out.println(UserManger.getInstance().ToString());
+//        
+//        System.out.println("=================================================");
+//        
+//        Notification testNotification = new Notification(LocalDate.now(), "Title: Spaggget", "UR a spagget");
+//        
+//        System.out.println(test.getUserData().getNotfications().ToString());
+//        
+//        System.out.println("=============== SEND BY OBSER");
+//        
+//        
+//        UserManger.getNotificationManger().setNotfication(testNotification, test);
+//        
+//        System.out.println(test.getUserData().getNotfications().ToString());
+//        Patient testing = new Patient(dets3, add3);
+//        
+//        Appointment newApp = new Appointment("DoctorIDhere", "PatientIDhere", LocalDate.now());
+//        testing.makeAppointment(newApp);
+//        
+//        System.out.println("=============== Check Strat");
+//        System.out.println(Data.getRequestedAppointments().ToString());
+//        
+//        
+//        Details dets4 = new Details("yaYeetBoi", "EEEEEEEEEEE", "Female", LocalDate.now(), "password");
+//        Address add4 = new Address("Buildingteate", "roadad", "Cityafwaf", "postcodewfawfaw");
+//        
+//        Admin adminTest = new Admin(dets4, add4);
+//        
+//        adminTest.createStaff(dets4, add4, Admin.StaffType.ADMIN);
+//        
+//        System.out.println(UserManger.getInstance().ToString());
     }
     
 }
