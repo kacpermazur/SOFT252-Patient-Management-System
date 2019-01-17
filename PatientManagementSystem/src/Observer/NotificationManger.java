@@ -15,27 +15,11 @@ import usermodel.users.User;
  *
  * @author kacper
  */
-public class NotificationManger implements iObservable, IInitialize
+public class NotificationManger implements iObservable
 {
     private List<IObserver> observers;
     
     private Notification notficationToSend;
-    
-    @Override
-    public void initialize()
-    {
-        try
-        {
-            for (User u : UserManger.getInstance().getUserTypeInList('S'))
-            {
-                registerObserver(u);
-            }
-        }
-        catch (NullPointerException ex)
-        {
-            ex.printStackTrace();
-        }
-    }
 
     @Override
     public void registerObserver(IObserver observer) 

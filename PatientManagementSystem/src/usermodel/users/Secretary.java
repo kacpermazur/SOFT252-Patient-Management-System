@@ -21,6 +21,8 @@ public class Secretary extends User{
 
     public Secretary(Details userDetails, Address userAddress) {
         super(userDetails, userAddress);
+        
+        UserManger.getNotificationManger().registerObserver(this);
     }
 
     @Override
@@ -89,9 +91,11 @@ public class Secretary extends User{
         Data.getRequestedAppointments().remove(appointment);
     }
    
-    public void removePatient(String ID)
+    public boolean removePatient(String ID)
     {
-        User hold = UserManger.getInstance().getById(ID).de;
+        User hold = UserManger.getInstance().getById(ID);
+        
+        return UserManger.getInstance().deleteUser(hold);
     }
 }
 
