@@ -5,17 +5,15 @@
  */
 package patientmanagementsystem;
 
+import guiview.loginUI;
 import java.time.LocalDate;
 import singleton.UserManger;
 import usermodel.Address;
-import usermodel.Appointment;
-import usermodel.Data;
 import usermodel.Details;
-import usermodel.Notification;
 import usermodel.users.Admin;
 import usermodel.users.Doctor;
 import usermodel.users.Patient;
-import usermodel.users.User;
+import usermodel.users.Secretary;
 
 /**
  *
@@ -28,9 +26,44 @@ public class main {
      */
     public static void main(String[] args) {
         
-          //Login
+           // here is some tests, all the code works just UI is not finished
         
-//        UserManger.getInstance().initialize();
+          //loginUI view = new loginUI();
+          
+          
+          UserManger.getInstance().initialize();
+          UserManger.getInstance().deserialize();
+          
+          
+//          Details details = new Details("Billy", "Smith", "Male", LocalDate.of(1999,12,12), "password");
+//          Details details2 = new Details("Tim", "Rogger", "Male", LocalDate.of(1969,12,12), "password");
+//          Details details3 = new Details("Sally", "McGee", "Female", LocalDate.of(1979,12,12), "password");
+//          
+//          Details details4 = new Details("Jimmy", "White", "Male", LocalDate.of(1994,12,12), "password");
+//          Details details5 = new Details("Luke", "Addh", "Male", LocalDate.of(1999,12,12), "password");
+//          Details details6 = new Details("Beth", "Smith", "Female", LocalDate.of(1999,12,12), "password");
+//          
+//          Details details7 = new Details("Jade", "Mikel", "Male", LocalDate.of(1993,12,12), "password");
+//          Details details8 = new Details("Kate", "Kay", "Female", LocalDate.of(1991,12,12), "password");
+//          
+//          Details details9 = new Details("Zack", "Kay", "Female", LocalDate.of(1991,12,12), "password");
+//          
+//          Address address = new Address("Building1", "road2", "City3", "pl4 Test");
+//          
+//          UserManger.getInstance().register(new Doctor(details, address), 'D');
+//          UserManger.getInstance().register(new Doctor(details2, address), 'D');
+//          UserManger.getInstance().register(new Doctor(details3, address), 'D');
+//          
+//          UserManger.getInstance().register(new Patient(details4, address), 'P');
+//          UserManger.getInstance().register(new Patient(details5, address), 'P');
+//          UserManger.getInstance().register(new Patient(details6, address), 'P');
+//          
+//          UserManger.getInstance().register(new Secretary(details7, address), 'S');
+//          UserManger.getInstance().register(new Secretary(details8, address), 'S');
+//          
+//          UserManger.getInstance().register(new Admin(details9, address), 'A');
+//          
+//          UserManger.getInstance().serialize();
 //        
 //        Details dets = new Details("testName", "testSurname", "Male", LocalDate.now(), "password");
 //        Address add = new Address("Building", "road", "City", "postcode");

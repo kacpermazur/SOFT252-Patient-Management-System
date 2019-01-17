@@ -5,11 +5,9 @@
  */
 package Observer;
 
+import java.util.ArrayList;
 import java.util.List;
-import singleton.UserManger;
-import usermodel.IInitialize;
 import usermodel.Notification;
-import usermodel.users.User;
 
 /**
  * Used by the observer pattern, this is where the subject is set and will send
@@ -18,7 +16,7 @@ import usermodel.users.User;
  */
 public class NotificationManger implements iObservable
 {
-    private List<IObserver> observers;
+    private List<IObserver> observers = new ArrayList<>();
     
     private Notification notficationToSend;
 
