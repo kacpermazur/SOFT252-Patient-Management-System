@@ -7,6 +7,7 @@ package usermodel.users;
 
 import singleton.UserManger;
 import usermodel.Address;
+import usermodel.Appointment;
 import usermodel.Details;
 import usermodel.Notification;
 import usermodel.Rating;
@@ -33,6 +34,25 @@ public class Patient extends User{
     
     public boolean rateDoctor(String doctorID, Rating userRating)
     {
+        User temp = UserManger.getInstance().getById(doctorID);
         
+        return temp.getUserData().getDoctorRatings().add(userRating);
+    }
+    
+    public String viewDoctorRating(String doctorID)
+    {
+        User temp = UserManger.getInstance().getById(doctorID);
+        
+        return temp.getUserData().getDoctorRatings().ToString();
+    }
+    
+    public boolean AddToHistory(Appointment pastAppointmentHistory)
+    {
+        return this.userData.getHistory().add(pastAppointmentHistory);
+    }
+    
+    public String ViewHistory()
+    {
+        return "";
     }
 }

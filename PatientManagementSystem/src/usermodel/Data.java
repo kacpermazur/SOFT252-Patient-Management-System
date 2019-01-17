@@ -42,6 +42,14 @@ public class Data implements Serializable {
         this.activePatientAppointments = new AppointmentList();;
     }
 
+    public RatingList getDoctorRatings() {
+        return doctorRatings;
+    }
+
+    public void setDoctorRatings(RatingList doctorRatings) {
+        this.doctorRatings = doctorRatings;
+    }
+    
     public Details getDetails() {
         return details;
     }
