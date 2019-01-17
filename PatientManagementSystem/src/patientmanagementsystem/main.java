@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import singleton.UserManger;
 import usermodel.Address;
 import usermodel.Details;
+import usermodel.Notification;
 import usermodel.users.Doctor;
 import usermodel.users.User;
 
@@ -22,6 +23,8 @@ public class main {
      * @param args the command line arguments"
      */
     public static void main(String[] args) {
+        
+        UserManger.getInstance().initialize();
         
         Details dets = new Details("testName", "testSurname", LocalDate.now(), "password");
         Address add = new Address("Building", "road", "City", "postcode");
@@ -52,6 +55,12 @@ public class main {
         UserManger.getInstance().deserialize();
         System.out.println("Loaded List");
         System.out.println(UserManger.getInstance().ToString());
+        
+        System.out.println("=================================================");
+        
+        Notification testNotification = new Notification(LocalDate.now(), "Title: Spaggget", "UR a spagget");
+        
+        System.out.println();
     }
     
 }

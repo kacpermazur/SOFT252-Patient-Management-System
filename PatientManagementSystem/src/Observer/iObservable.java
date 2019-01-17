@@ -15,7 +15,7 @@ public interface iObservable
     
     public void removeObserver(IObserver observer);
     
-    public void SingleObserver(IObserver observer);
+    public void notifySingleObserver(IObserver observer);
     
     public void notifyObservers();
 }

@@ -5,18 +5,19 @@
  */
 package usermodel.users;
 
+import Observer.IObserver;
 import java.io.Serializable;
-import java.util.ArrayList;
 import usermodel.Address;
 import usermodel.Data;
 import usermodel.Details;
+import usermodel.Notification;
 
 
 /**
  *
  * @author kacper
  */
-public abstract class User implements Serializable{
+public abstract class User implements Serializable, IObserver{
     
     protected Data userData = new Data();
 
@@ -32,4 +33,8 @@ public abstract class User implements Serializable{
     public void setUserData(Data userData) {
         this.userData = userData;
     }
+
+    @Override
+    public abstract void update(Notification notfication);
+    
 }

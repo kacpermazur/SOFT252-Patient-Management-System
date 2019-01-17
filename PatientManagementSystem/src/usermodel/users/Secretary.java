@@ -7,6 +7,7 @@ package usermodel.users;
 
 import usermodel.Address;
 import usermodel.Details;
+import usermodel.Notification;
 
 /**
  *
@@ -17,5 +18,11 @@ public class Secretary extends User{
     public Secretary(Details userDetails, Address userAddress) {
         super(userDetails, userAddress);
     }
+
+    @Override
+    public void update(Notification notfication) {
+        this.userData.getNotfications().add(notfication);
+    }
+    
     
 }

@@ -7,6 +7,7 @@ package usermodel.users;
 
 import usermodel.Address;
 import usermodel.Details;
+import usermodel.Notification;
 
 /**
  *
@@ -18,4 +19,8 @@ public class Doctor extends User{
         super(userDetails, userAddress);
     }
     
+    @Override
+    public void update(Notification notfication) {
+        this.userData.getNotfications().add(notfication);
+    }
 }

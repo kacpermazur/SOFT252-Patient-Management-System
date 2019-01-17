@@ -11,6 +11,7 @@ import usermodel.Notification;
  *
  * @author kacper
  */
-public interface IObserver {
+public interface IObserver 
+{
     public void update (Notification notfication);
 }

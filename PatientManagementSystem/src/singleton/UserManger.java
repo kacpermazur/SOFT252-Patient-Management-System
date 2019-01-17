@@ -25,7 +25,7 @@ public class UserManger implements IInitialize
     private List<User> UserList;
     private final File FILENAME = new File ("UserDataList.bigchungus");
     
-    private NotificationManger notficationManger = new NotificationManger();
+    private NotificationManger notficationManger;
         
     public static UserManger getInstance()
     {
@@ -50,8 +50,9 @@ public class UserManger implements IInitialize
     @Override
     public void initialize() 
     {
+        notficationManger = new NotificationManger();
         UserList = new ArrayList<>();
-        notficationManger.initialize();
+        //notficationManger.initialize();
     }    
     
     public User login(String id, String password)
@@ -64,6 +65,21 @@ public class UserManger implements IInitialize
         }
         
         return null;
+    }
+    
+    public List<User> getUserTypeList(char type)
+    {
+        List<User> temp = null;
+        
+        for(User u : UserList)
+        {
+            if(u.getUserData().getDetails().getiD().charAt(0) == type)
+            {
+                temp.add(u);
+            }
+        }
+        
+        return temp;
     }
     
     public boolean register(User user, char type)
@@ -157,7 +173,6 @@ public class UserManger implements IInitialize
     
     private String generateID(char type)
     { 
-        
         NumberFormat nf = new DecimalFormat("000");
         
         return type + nf.format(UserList.size());

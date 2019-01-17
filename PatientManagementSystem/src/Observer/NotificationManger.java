@@ -6,8 +6,10 @@
 package Observer;
 
 import java.util.List;
+import singleton.UserManger;
 import usermodel.IInitialize;
-import usermodel.users.Secretary;
+import usermodel.Notification;
+import usermodel.users.User;
 
 /**
  *
@@ -15,32 +17,75 @@ import usermodel.users.Secretary;
  */
 public class NotificationManger implements iObservable, IInitialize
 {
-    private List<Secretary> secretaryList;
+    private List<IObserver> observers;
+    
+    private Notification notficationToSend;
     
     @Override
     public void initialize()
     {
-        
+        try
+        {
+            for (User u : UserManger.getInstance().getUserTypeList('S'))
+            {
+                registerObserver(u);
+            }
+        }
+        catch (NullPointerException ex)
+        {
+            ex.printStackTrace();
+        }
     }
 
     @Override
-    public void registerObserver(IObserver observer) {
-        
+    public void registerObserver(IObserver observer) 
+    {
+        observers.add(observer);
     }
 
     @Override
-    public void removeObserver(IObserver observer) {
+    public void removeObserver(IObserver observer) 
+    {
+        int index = observers.indexOf(observer);
         
+        if (index >= 0)
+        {
+            observers.remove(index);
+        }
     }
 
     @Override
-    public void SingleObserver(IObserver observer) {
-       
+    public void notifySingleObserver(IObserver observer) 
+    {
+        if(notficationToSend != null)
+        {
+            observer.update(notficationToSend);
+            notficationToSend = null;
+        }
     }
 
     @Override
-    public void notifyObservers() {
-        
+    public void notifyObservers() 
+    {
+        for(IObserver observer : observers)
+        {
+            if(notficationToSend != null)
+            {
+                observer.update(notficationToSend);
+                notficationToSend = null;
+            }
+        }
     }
     
+    public void setNotfication(Notification notification)
+    {
+        notficationToSend = notification;
+        notifyObservers();
+    }
+    
+    public void setNotfication(Notification notification, IObserver observer)
+    {
+        notficationToSend = notification;
+        notifySingleObserver(observer);
+    }
 }
