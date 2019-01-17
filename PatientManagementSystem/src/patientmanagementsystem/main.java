@@ -60,14 +60,14 @@ public class main {
         
         Notification testNotification = new Notification(LocalDate.now(), "Title: Spaggget", "UR a spagget");
         
-        test.getUserData().getNotfications().ToString();
+        System.out.println(test.getUserData().getNotfications().ToString());
         
         System.out.println("=============== SEND BY OBSER");
         
         
         UserManger.getNotificationManger().setNotfication(testNotification, test);
         
-        test.getUserData().getNotfications().ToString();
+        System.out.println(test.getUserData().getNotfications().ToString());
         
         System.out.println();
     }
