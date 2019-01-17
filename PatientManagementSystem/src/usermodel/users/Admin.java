@@ -26,13 +26,6 @@ public class Admin extends User{
     public void update(Notification notfication) {
         this.userData.getNotfications().add(notfication);
     }
-//    
-//    public void createAdmin(Details details, Address address)
-//    {
-//        UserManger.getInstance().register( new Admin(details, address), 'A');
-//    }
-    
-    
     
     public void createStaff(Details details, Address address, StaffType type)
     {
@@ -52,4 +45,7 @@ public class Admin extends User{
                 break;
         }
     }
+    
+    
+    
 }
