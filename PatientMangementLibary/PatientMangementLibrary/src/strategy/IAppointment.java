@@ -8,14 +8,14 @@ package strategy;
 import usermodel.Appointment;
 
 /**
- *
+ * appointmenet starergy pattern for requests and pre-approved appointments
  * @author kacper
  */
 public interface IAppointment {
     
     /**
-     *
-     * @param appointment
+     * appointment function will set the function to its correct method when called
+     * @param appointment the appointment that will be set to its correct place
      */
     public void makeAppointment(Appointment appointment);
 }

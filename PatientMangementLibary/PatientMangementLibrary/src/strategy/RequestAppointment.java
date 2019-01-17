@@ -9,14 +9,14 @@ import usermodel.Appointment;
 import usermodel.Data;
 
 /**
- *
+ * sets the appointmente to the pending list that will get reviewed by sec later
  * @author kacper
  */
 public class RequestAppointment implements IAppointment{
 
     /**
-     *
-     * @param appointment
+     *  sets the appointmentto the static data class that can be acessed globally by the secutary
+     * @param appointment appointment that is getting approved but not set to doctor yet.
      */
     @Override
     public void makeAppointment(Appointment appointment) {

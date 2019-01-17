@@ -122,7 +122,7 @@ public class Patient extends User implements IAppointment{
     }
     
     /**
-     *
+     * sends the notfication to the secu
      */
     public void requestTermination()
     {

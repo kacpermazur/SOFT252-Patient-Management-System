@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * appointment list that has its own implementation that ineracts with the list,
+ * makes it more safe and clean
  * @author kacper
  */
 public class AppointmentList implements Serializable{
@@ -25,9 +26,9 @@ public class AppointmentList implements Serializable{
     }
     
     /**
-     *
-     * @param appointment
-     * @return
+     * adds appointment to the list
+     * @param appointment 
+     * @return if the value was added
      */
     public boolean add(Appointment appointment)
     {
@@ -42,8 +43,8 @@ public class AppointmentList implements Serializable{
     }
     
     /**
-     *
-     * @return
+     * clears the whole list
+     * @return returns true when list is cleared
      */
     public boolean clear()
     {
@@ -58,10 +59,10 @@ public class AppointmentList implements Serializable{
     }
     
     /**
-     *
-     * @param appointment
-     * @param target
-     * @return
+     * moves the appointment to another list and removes this extra copy
+     * @param appointment target that is being moved
+     * @param target the new list its being send to
+     * @return true when action is completed
      */
     public boolean moveTo(Appointment appointment, List<Appointment> target)
     {
@@ -86,9 +87,9 @@ public class AppointmentList implements Serializable{
     }
     
     /**
-     *
-     * @param id
-     * @return
+     * returns an appointment based on the user id it has stored inside
+     * @param id patients ID
+     * @return returns appointment or null if its not found 
      */
     public Appointment getByPatientID(String id)
     {
@@ -101,8 +102,8 @@ public class AppointmentList implements Serializable{
     }
     
     /**
-     *
-     * @return
+     * returns string value of the whole list
+     * @return single string of the whole list
      */
     public String ToString()
     {

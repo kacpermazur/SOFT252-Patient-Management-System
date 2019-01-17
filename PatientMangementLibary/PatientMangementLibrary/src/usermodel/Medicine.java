@@ -8,7 +8,7 @@ package usermodel;
 import java.io.Serializable;
 
 /**
- *
+ * Stores the name of the Medicie and its quantity  
  * @author kacper
  */
 public class Medicine implements Serializable{

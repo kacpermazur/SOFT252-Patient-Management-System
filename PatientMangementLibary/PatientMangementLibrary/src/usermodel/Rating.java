@@ -41,8 +41,8 @@ public class Rating implements Serializable{
     }
 
     /**
-     *
-     * @param rating
+     * clamps the value between 1 and 5
+     * @param rating rating the user sets for the doctor
      */
     public void setRating(Integer rating) {
         

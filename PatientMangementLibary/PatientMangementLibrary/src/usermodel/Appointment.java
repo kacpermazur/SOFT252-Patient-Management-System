@@ -12,7 +12,8 @@ import usermodel.users.Doctor;
 import usermodel.users.Patient;
 
 /**
- *
+ * user appointment that holds the target doctor the send patient, the date that is being set
+ * and the perscription.
  * @author kacper
  */
 public class Appointment implements Serializable{
@@ -23,7 +24,7 @@ public class Appointment implements Serializable{
     private Perscription perscription;
     
     /**
-     *
+     * 
      */
     public Appointment()
     {
@@ -31,8 +32,9 @@ public class Appointment implements Serializable{
     }
 
     /**
-     *
-     * @param doctor
+     * if an object is passed its string values will be set so it can be layer serlisized and called back
+     * by the usermanger
+     * @param doctor 
      * @param patient
      * @param date
      */
@@ -43,10 +45,10 @@ public class Appointment implements Serializable{
     }
 
     /**
-     *
-     * @param doctorID
+     * same constructor but sets the string values 
+     * @param doctorID 
      * @param patientID
-     * @param date
+     * @param date 
      */
     public Appointment(String doctorID, String patientID, LocalDate date) {
         this.doctorID = doctorID;
@@ -87,8 +89,8 @@ public class Appointment implements Serializable{
     }
     
     /**
-     *
-     * @return
+     * sets the perscription to text and checks if perscption exisits and sets it aswell
+     * @return whole appointment values
      */
     public String ToSring()
     {

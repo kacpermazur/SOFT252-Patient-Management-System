@@ -20,7 +20,7 @@ import usermodel.Notification;
 public class Secretary extends User{
 
     /**
-     *
+     * constructor 
      * @param userDetails
      * @param userAddress
      */
@@ -66,7 +66,7 @@ public class Secretary extends User{
     }
     
     /**
-     *
+     * sets the first letter of the temp patient to P so user becomes fully registered
      * @param Id
      */
     public void approveAccount(String Id)
@@ -102,7 +102,7 @@ public class Secretary extends User{
     }
     
     /**
-     *
+     * sets the 
      * @param userID
      */
     public void CreateAppointmentBetween(String userID)

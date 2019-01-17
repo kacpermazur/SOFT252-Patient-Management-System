@@ -8,7 +8,8 @@ package usermodel;
 import java.io.Serializable;
 
 /**
- *
+ * data class that will be implemented by each user, every user has same data but not everything is used so it 
+ * gets uniformedly saved and loads back esaily
  * @author kacper
  */
 public class Data implements Serializable {
@@ -31,7 +32,7 @@ public class Data implements Serializable {
     private static AppointmentList requestedAppointments;
 
     /**
-     *
+     * initizes all the data so no null refrences get set if user tries setting data into a null refrenced 
      */
     public Data() 
     {

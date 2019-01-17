@@ -12,7 +12,8 @@ import usermodel.Notification;
 import usermodel.users.User;
 
 /**
- * Used by the observer pattern, this is where the subject is set and will 
+ * Used by the observer pattern, this is where the subject is set and will send
+ * its notfications across its subsribers 
  * @author kacper
  */
 public class NotificationManger implements iObservable
@@ -22,8 +23,8 @@ public class NotificationManger implements iObservable
     private Notification notficationToSend;
 
     /**
-     *
-     * @param observer
+     * Class implementing the observer will set to list of observers inerfaces
+     * @param observer class implementing the interface
      */
     @Override
     public void registerObserver(IObserver observer) 
@@ -32,8 +33,8 @@ public class NotificationManger implements iObservable
     }
 
     /**
-     *
-     * @param observer
+     * removes the refrence that from the list so it no longer gets updated;
+     * @param observer class implementing the interface
      */
     @Override
     public void removeObserver(IObserver observer) 
@@ -47,8 +48,8 @@ public class NotificationManger implements iObservable
     }
 
     /**
-     *
-     * @param observer
+     * sends notfication to single targeted class that implements IObserver
+     * @param observer class implementing the interface
      */
     @Override
     public void notifySingleObserver(IObserver observer) 
@@ -61,7 +62,7 @@ public class NotificationManger implements iObservable
     }
 
     /**
-     *
+     * go through whole list and trigger the update each class is implementing with the passed value
      */
     @Override
     public void notifyObservers() 
@@ -77,8 +78,8 @@ public class NotificationManger implements iObservable
     }
     
     /**
-     *
-     * @param notification
+     * sets the notfications and sends it out to all subsribers 
+     * @param notification notification that gets send out
      */
     public void setNotfication(Notification notification)
     {
@@ -87,9 +88,9 @@ public class NotificationManger implements iObservable
     }
     
     /**
-     *
-     * @param notification
-     * @param observer
+     * sends out a notfication to a single targeted user
+     * @param notification notfication that is being send out
+     * @param observer class that implements it so update can be triggered
      */
     public void setNotfication(Notification notification, IObserver observer)
     {

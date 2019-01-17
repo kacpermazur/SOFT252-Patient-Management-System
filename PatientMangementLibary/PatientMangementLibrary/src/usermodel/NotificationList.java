@@ -50,9 +50,9 @@ public class NotificationList implements Serializable{
     }
     
     /**
-     *
-     * @param value
-     * @return
+     * 
+     * @param value title of the notifcation
+     * @return null user
      */
     public Notification getByTitle(String value)
     {

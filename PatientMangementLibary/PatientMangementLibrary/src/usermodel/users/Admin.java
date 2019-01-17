@@ -12,13 +12,13 @@ import usermodel.Details;
 import usermodel.Notification;
 
 /**
- *
+ * admin class
  * @author kacper
  */
 public class Admin extends User{
 
     /**
-     *
+     * diffrent staff types that are checked aginst
      */
     public enum StaffType { 
 
@@ -38,7 +38,7 @@ public class Admin extends User{
         SECRETARY };
     
     /**
-     *
+     * constructor that takes in details (name, surname...ect) and the address
      * @param userDetails
      * @param userAddress
      */
@@ -56,10 +56,10 @@ public class Admin extends User{
     }
     
     /**
-     *
-     * @param details
-     * @param address
-     * @param type
+     * create the staff based on staff type and adds to the user list in userManger
+     * @param details user details name, surname,ect
+     * @param address 
+     * @param type what type of user they are
      */
     public void createStaff(Details details, Address address, StaffType type)
     {
@@ -81,7 +81,7 @@ public class Admin extends User{
     }
     
     /**
-     *
+     * removes the staff from the user list
      * @param id
      */
     public void removeStaff(String id)
@@ -90,9 +90,9 @@ public class Admin extends User{
     }
     
     /**
-     *
+     * checks the rating of the doctor by searching it by its ID
      * @param doctorID
-     * @return
+     * @return string of the review
      */
     public String viewRatings(String doctorID)
     {
@@ -101,7 +101,8 @@ public class Admin extends User{
     }
     
     /**
-     *
+     * admin providing feed back the doctor based on its ID and sets it as a notfication
+     * to he doctor
      * @param doctorID
      * @param comment
      */

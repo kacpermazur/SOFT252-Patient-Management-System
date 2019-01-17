@@ -13,25 +13,25 @@ public interface iObservable
 {
 
     /**
-     *
-     * @param observer
+     *  registers the Observer that is being passed through 
+     * @param observer classes that implement this interface
      */
     public void registerObserver(IObserver observer);
     
     /**
-     *
-     * @param observer
+     * removes the Observer that is being passed through 
+     * @param observer classes that implement this interface
      */
     public void removeObserver(IObserver observer);
     
     /**
-     *
-     * @param observer
+     * notifies the Observer that is being passed through 
+     * @param observer classes that implement this interface
      */
     public void notifySingleObserver(IObserver observer);
     
     /**
-     *
+     * notifies all the Observer that is being passed through 
      */
     public void notifyObservers();
 }

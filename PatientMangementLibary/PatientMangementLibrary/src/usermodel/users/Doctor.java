@@ -15,15 +15,15 @@ import usermodel.Notification;
 import usermodel.Perscription;
 
 /**
- *
+ * Doctor class
  * @author kacper
  */
 public class Doctor extends User implements IAppointment{
 
     /**
      *
-     * @param userDetails
-     * @param userAddress
+     * @param userDetails constructor that takes in details (name, surname...ect) and the address
+     * @param userAddress 
      */
     public Doctor(Details userDetails, Address userAddress) {
         super(userDetails, userAddress);
@@ -39,7 +39,7 @@ public class Doctor extends User implements IAppointment{
     }
     
     /**
-     *
+     * returns a string of appoints that doctor has to do
      * @return
      */
     public String getAppointments()
@@ -48,8 +48,8 @@ public class Doctor extends User implements IAppointment{
     }
     
     /**
-     *
-     * @param patient
+     * looks aht patients history by and returing it as a string
+     * @param patient target that gets its 
      * @return
      */
     public String InspectPatientHistory(Patient patient )
@@ -68,11 +68,11 @@ public class Doctor extends User implements IAppointment{
     }
     
     /**
-     *
+     * sets the perscription which can be passed to the patient 
      * @param medicine
      * @param dosage
      * @param notes
-     * @return
+     * @return returns a perscription with all the set values
      */
     public Perscription perscribeMedicine(Medicine medicine, String dosage, String notes)
     {
@@ -80,7 +80,7 @@ public class Doctor extends User implements IAppointment{
     }
     
     /**
-     *
+     * request the medicice from the invetory manger
      * @param medicine
      */
     public void requestMedicine(Medicine medicine)

@@ -8,7 +8,7 @@ package usermodel;
 import java.io.Serializable;
 
 /**
- *
+ * holds hte medicine and doctors notes with the dosage amounts
  * @author kacper
  */
 public class Perscription implements Serializable{
@@ -24,8 +24,8 @@ public class Perscription implements Serializable{
     }
     
     /**
-     *
-     * @param perscribedMedicine
+     * constructor without notes so doctor has a choice between adding or removing notes
+     * @param perscribedMedicine medicine that doctor precribes 
      * @param dosage
      */
     public Perscription(Medicine perscribedMedicine, String dosage) {
@@ -99,8 +99,8 @@ public class Perscription implements Serializable{
     }
     
     /**
-     *
-     * @return
+     * returns every elements and checks if the notes are present or not 
+     * @return string seperated out by a dash
      */
     public String ToString()
     {

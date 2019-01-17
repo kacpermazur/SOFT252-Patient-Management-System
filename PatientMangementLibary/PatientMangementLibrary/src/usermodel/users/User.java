@@ -20,7 +20,7 @@ import usermodel.Notification;
 public abstract class User implements Serializable, IObserver{
     
     /**
-     *
+     * sets the data to the abstract class
      */
     protected Data userData = new Data();
 

@@ -8,7 +8,7 @@ package usermodel;
 import java.io.Serializable;
 
 /**
- *
+ * User address class that holds the first line address and postcode
  * @author kacper
  */
 public class Address implements Serializable{
@@ -18,15 +18,15 @@ public class Address implements Serializable{
     private String postCode;
     
     /**
-     *
+     * 
      */
     public Address() {
     }
 
     /**
      *
-     * @param building
-     * @param road
+     * @param building 
+     * @param road 
      * @param city
      * @param postCode
      */
@@ -107,8 +107,8 @@ public class Address implements Serializable{
     }
     
     /**
-     *
-     * @return
+     * outPuts the whole adress into a single string 
+     * @return whole adresss formatted by commas
      */
     public String toString()
     {

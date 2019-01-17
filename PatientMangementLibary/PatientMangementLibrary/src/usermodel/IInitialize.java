@@ -6,7 +6,7 @@
 package usermodel;
 
 /**
- *
+ * used to initialize other classes rather than calling funtions such as init
  * @author kacper
  */
 public interface IInitialize {

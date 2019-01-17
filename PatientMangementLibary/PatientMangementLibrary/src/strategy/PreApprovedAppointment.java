@@ -10,13 +10,13 @@ import usermodel.Appointment;
 import usermodel.users.User;
 
 /**
- *
+ * this will set the appointment to the target doctor 
  * @author kacper
  */
 public class PreApprovedAppointment implements IAppointment{
 
     /**
-     *
+     * sets the appointment to the target doctor that is stored on the appointment class and refrence is called from the usermanger.
      * @param appointment
      */
     @Override

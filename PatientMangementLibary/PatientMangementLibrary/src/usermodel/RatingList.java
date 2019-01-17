@@ -18,7 +18,7 @@ public class RatingList implements Serializable{
     private final List<Rating> ratings;
     
     /**
-     *
+     * rating list that has its own implementions same as appointmentlist, and notificationlist
      */
     public RatingList()
     {

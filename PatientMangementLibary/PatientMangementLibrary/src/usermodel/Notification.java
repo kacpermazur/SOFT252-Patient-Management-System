@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 
 
 /**
- *
+ * user notfiactions that holds the data tha this going to be set and title, comment 
  * @author kacper
  */
 public class Notification implements Serializable{
@@ -88,7 +88,7 @@ public class Notification implements Serializable{
     }
     
     /**
-     *
+     * returns string of all elements 
      * @return
      */
     public String ToString()
