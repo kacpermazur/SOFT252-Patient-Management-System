@@ -7,6 +7,7 @@ package usermodel;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import singleton.UserManger;
 import usermodel.users.Doctor;
 import usermodel.users.Patient;
 
@@ -27,7 +28,9 @@ public class Appointment implements Serializable{
     }
 
     public Appointment(Doctor doctor, Patient patient, LocalDate date) {
-        // ToDo: Set ID From Doctor & Patient Class when finished
+        this.doctorID = UserManger.getInstance().getUserID(doctor);
+        this.patientID = UserManger.getInstance().getUserID(patient);
+        this.date = date;
     }
 
     public Appointment(String doctorID, String patientID, LocalDate date) {

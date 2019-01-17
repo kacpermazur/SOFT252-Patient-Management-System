@@ -5,27 +5,25 @@
  */
 package singleton;
 
-import Observer.NotificationManger;
 import java.io.*;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
-import usermodel.IInitialize;
 import usermodel.users.User;
 
 /**
  *
  * @author kacper
  */
-public class UserManger implements IInitialize
-{
-    private volatile static UserManger _instance;
+public class UserManger implements IInitialize {
     
     private List<User> UserList;
+    
     private final File FILENAME = new File ("UserDataList.bigchungus");
     
-    private NotificationManger notficationManger;
+    private volatile static UserManger _instance;
+    private NotificationManger notificationManger;
         
     public static UserManger getInstance()
     {
@@ -44,16 +42,15 @@ public class UserManger implements IInitialize
     
     public static NotificationManger getNotificationManger()
     {
-        return _instance.notficationManger;
+        return _instance.notificationManger;
     }
-
+    
     @Override
-    public void initialize() 
+    public void initialize()
     {
-        notficationManger = new NotificationManger();
         UserList = new ArrayList<>();
-        //notficationManger.initialize();
-    }    
+        notificationManger = new notificationManger();
+    }
     
     public User login(String id, String password)
     {
@@ -67,7 +64,7 @@ public class UserManger implements IInitialize
         return null;
     }
     
-    public List<User> getUserTypeList(char type)
+    public List<User> getUserTypeInList(char type)
     {
         List<User> temp = null;
         
@@ -78,7 +75,6 @@ public class UserManger implements IInitialize
                 temp.add(u);
             }
         }
-        
         return temp;
     }
     
@@ -92,6 +88,11 @@ public class UserManger implements IInitialize
     public boolean deleteUser(User user)
     {
         return UserList.remove(user);
+    }
+    
+    public String getUserID(User user)
+    {
+        return user.getUserData().getDetails().getiD();
     }
     
     public void clear()
@@ -173,6 +174,7 @@ public class UserManger implements IInitialize
     
     private String generateID(char type)
     { 
+        
         NumberFormat nf = new DecimalFormat("000");
         
         return type + nf.format(UserList.size());
