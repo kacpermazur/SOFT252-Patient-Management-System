@@ -5,6 +5,7 @@
  */
 package usermodel.users;
 
+import java.time.LocalDate;
 import singleton.UserManger;
 import usermodel.Address;
 import usermodel.Details;
@@ -46,6 +47,23 @@ public class Admin extends User{
         }
     }
     
+    public void removeStaff(String id)
+    {
+        UserManger.getInstance().deleteUser(UserManger.getInstance().getById(id));
+    }
     
+    public String viewRatings(String doctorID)
+    {
+        return UserManger.getInstance().getById(doctorID).getUserData()
+                .getDoctorRatings().ToString();
+    }
     
+    public void provideFeedback(String doctorID, String comment)
+    {
+        Notification notification = new Notification(LocalDate.now(),
+                "FeedBack:", comment);
+        
+        UserManger.getNotificationManger().setNotfication(notification, 
+                UserManger.getInstance().getById(doctorID));
+    }
 }
